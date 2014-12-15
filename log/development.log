@@ -1,0 +1,24 @@
+  [1m[36m (146.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (36.4ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUser (20141214013146)
+  [1m[35m (15.6ms)[0m  BEGIN
+  [1m[36m (181.4ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "name" character varying(255), "username" character varying(255), "password_digest" character varying(255), "age" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (27.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141214013146"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateWorkout (20141214013202)
+  [1m[35m (15.5ms)[0m  BEGIN
+  [1m[36m (2.6ms)[0m  [1mCREATE TABLE "workouts" ("id" serial primary key, "level" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (23.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141214013202"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Migrating to CreateExcercise (20141214013222)
+  [1m[35m (15.6ms)[0m  BEGIN
+  [1m[36m (3.7ms)[0m  [1mCREATE TABLE "excercises" ("id" serial primary key, "name" character varying(255), "difficulty" integer, "reps" integer, "sets" integer, "requirements" character varying(255), "bodypart" character varying(255), "description" character varying(255), "pounds" integer, "workout_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141214013222"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Migrating to CreateJoinTableUserWorkout (20141214013338)
+  [1m[35m (15.5ms)[0m  BEGIN
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "Users_Workouts" ("user_id" integer NOT NULL, "workout_id" integer NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141214013338"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"

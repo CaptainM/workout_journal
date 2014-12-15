@@ -1,0 +1,54 @@
+{
+	"workouts": [
+	{
+		"level": "1",
+		"exercises": [
+			{
+				"name": "box jumps",
+				"difficulty": "3", 
+				"reps": "10",
+				"sets": "3",
+				"requirements": ["sturdy box at least two feet high"],
+				"bodypart": "quadriceps",
+				"description": "Plant both feet should length apart and jump onto the box. Once on the box, stand fully upright.",
+				"pounds": "1"
+			},
+			{
+				"name": "v-press",
+				"difficulty": "4", 
+				"reps": "12",
+				"sets": "3",
+				"requirements": ["mat"],
+				"bodypart": "abdominals",
+				"description": "Lie flat on the ground, then raise your legs and arms slightly off the matt.",
+				"pounds": "1"
+			}
+		]
+	},
+	{
+		"level": "2",
+		"exercises": [
+			{
+				"name": "assisted pullups",
+				"difficulty": "1",
+				"reps": "12", 
+				"sets": "3", 
+				"requirements": ["Assisted Pullup Machine"],
+				"bodypart": "biceps",
+				"description": "Kneel on the machine and adjust the weight to your needs",
+				"pounds": "50"
+			},
+			{
+				"name": "assisted dips",
+				"difficulty": "1",
+				"reps": "12", 
+				"sets": "3", 
+				"requirements": ["Assisted Dips Machine"],
+				"bodypart": "triceps",
+				"description": "Kneel on the machine and adjust the weight to your needs",
+				"pounds": "50"
+			}
+		]
+	}
+]
+}

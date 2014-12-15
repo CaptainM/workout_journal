@@ -6,5 +6,5 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-f = file.open(workout.json)
-JSON.parse(f.read)
+f = File.open("workout.json")
+myjson = JSON.parse(f.read)
