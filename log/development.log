@@ -51,3 +51,94 @@ Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-15 10:09:31 
   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (16.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (12.4ms)[0m  BEGIN
+  [1m[36m (27.9ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (80.7ms)[0m  [1mINSERT INTO "excercises" ("bodypart", "created_at", "description", "difficulty", "name", "pounds", "reps", "requirements", "sets", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["bodypart", "quadriceps"], ["created_at", "2014-12-15 17:13:49.569065"], ["description", "Plant both feet should length apart and jump onto the box. Once on the box, stand fully upright."], ["difficulty", 3], ["name", "box jumps"], ["pounds", 10], ["reps", 10], ["requirements", "sturdy box at least two feet high"], ["sets", 3], ["updated_at", "2014-12-15 17:13:49.569065"]]
+  [1m[35m (28.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "excercises" ("bodypart", "created_at", "description", "difficulty", "name", "pounds", "reps", "requirements", "sets", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["bodypart", "biceps"], ["created_at", "2014-12-15 17:13:49.695022"], ["description", "Kneel on the machine and adjust the weight to your needs"], ["difficulty", 1], ["name", "assisted pullups"], ["pounds", 12], ["reps", 12], ["requirements", "Assisted Pullup Machine"], ["sets", 3], ["updated_at", "2014-12-15 17:13:49.695022"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (65.5ms)[0m  [1mINSERT INTO "workouts" ("created_at", "level", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-12-15 18:53:50.540081"], ["level", 1], ["updated_at", "2014-12-15 18:53:50.540081"]]
+  [1m[35m (55.0ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "workouts" ("created_at", "level", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-12-15 18:53:50.692550"], ["level", 2], ["updated_at", "2014-12-15 18:53:50.692550"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "excercises" ("bodypart", "created_at", "description", "difficulty", "name", "pounds", "reps", "requirements", "sets", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["bodypart", "quadriceps"], ["created_at", "2014-12-15 18:53:50.734778"], ["description", "Plant both feet should length apart and jump onto the box. Once on the box, stand fully upright."], ["difficulty", 3], ["name", "box jumps"], ["pounds", 10], ["reps", 10], ["requirements", "sturdy box at least two feet high"], ["sets", 3], ["updated_at", "2014-12-15 18:53:50.734778"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "excercises" ("bodypart", "created_at", "description", "difficulty", "name", "pounds", "reps", "requirements", "sets", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["bodypart", "biceps"], ["created_at", "2014-12-15 18:53:50.737893"], ["description", "Kneel on the machine and adjust the weight to your needs"], ["difficulty", 1], ["name", "assisted pullups"], ["pounds", 12], ["reps", 12], ["requirements", "Assisted Pullup Machine"], ["sets", 3], ["updated_at", "2014-12-15 18:53:50.737893"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mWorkout Load (0.6ms)[0m  SELECT  "workouts".* FROM "workouts"  LIMIT 1
+  [1m[36mWorkout Load (0.3ms)[0m  [1mSELECT  "workouts".* FROM "workouts"  LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "workouts" ("created_at", "level", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-12-15 19:18:49.509666"], ["level", 1], ["updated_at", "2014-12-15 19:18:49.509666"]]
+  [1m[35m (16.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "workouts" ("created_at", "level", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-12-15 19:18:49.542112"], ["level", 2], ["updated_at", "2014-12-15 19:18:49.542112"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "excercises" ("bodypart", "created_at", "description", "difficulty", "name", "pounds", "reps", "requirements", "sets", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["bodypart", "quadriceps"], ["created_at", "2014-12-15 19:18:49.555948"], ["description", "Plant both feet should length apart and jump onto the box. Once on the box, stand fully upright."], ["difficulty", 3], ["name", "box jumps"], ["pounds", 10], ["reps", 10], ["requirements", "sturdy box at least two feet high"], ["sets", 3], ["updated_at", "2014-12-15 19:18:49.555948"]]
+  [1m[35m (15.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "excercises" ("bodypart", "created_at", "description", "difficulty", "name", "pounds", "reps", "requirements", "sets", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["bodypart", "biceps"], ["created_at", "2014-12-15 19:18:49.574331"], ["description", "Kneel on the machine and adjust the weight to your needs"], ["difficulty", 1], ["name", "assisted pullups"], ["pounds", 12], ["reps", 12], ["requirements", "Assisted Pullup Machine"], ["sets", 3], ["updated_at", "2014-12-15 19:18:49.574331"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mWorkout Load (38.8ms)[0m  SELECT  "workouts".* FROM "workouts"  WHERE "workouts"."id" = $1 LIMIT 1  [["id", "id"]]
+PG::InvalidTextRepresentation: ERROR:  invalid input syntax for integer: "id"
+: SELECT  "workouts".* FROM "workouts"  WHERE "workouts"."id" = $1 LIMIT 1
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mWorkout Load (0.4ms)[0m  SELECT  "workouts".* FROM "workouts"  WHERE "workouts"."id" = $1 LIMIT 1  [["id", 0]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (23.3ms)[0m  [1mINSERT INTO "workouts" ("created_at", "level", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-12-15 19:31:52.175438"], ["level", 1], ["updated_at", "2014-12-15 19:31:52.175438"]]
+  [1m[35m (30.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "workouts" ("created_at", "level", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-12-15 19:31:52.234036"], ["level", 2], ["updated_at", "2014-12-15 19:31:52.234036"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "workouts" ("created_at", "level", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-12-15 19:32:29.195144"], ["level", 1], ["updated_at", "2014-12-15 19:32:29.195144"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "workouts" ("created_at", "level", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-12-15 19:32:29.201033"], ["level", 2], ["updated_at", "2014-12-15 19:32:29.201033"]]
+  [1m[36m (3.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mWorkout Load (0.4ms)[0m  SELECT  "workouts".* FROM "workouts"  LIMIT 1
+  [1m[36mWorkout Load (0.2ms)[0m  [1mSELECT  "workouts".* FROM "workouts"  LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "excercises" ("bodypart", "created_at", "description", "difficulty", "name", "pounds", "reps", "requirements", "sets", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["bodypart", "quadriceps"], ["created_at", "2014-12-15 19:32:29.262159"], ["description", "Plant both feet should length apart and jump onto the box. Once on the box, stand fully upright."], ["difficulty", 3], ["name", "box jumps"], ["pounds", 10], ["reps", 10], ["requirements", "sturdy box at least two feet high"], ["sets", 3], ["updated_at", "2014-12-15 19:32:29.262159"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "excercises" ("bodypart", "created_at", "description", "difficulty", "name", "pounds", "reps", "requirements", "sets", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["bodypart", "biceps"], ["created_at", "2014-12-15 19:32:29.264892"], ["description", "Kneel on the machine and adjust the weight to your needs"], ["difficulty", 1], ["name", "assisted pullups"], ["pounds", 12], ["reps", 12], ["requirements", "Assisted Pullup Machine"], ["sets", 3], ["updated_at", "2014-12-15 19:32:29.264892"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "workouts" ("created_at", "level", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-12-15 19:37:21.928839"], ["level", 1], ["updated_at", "2014-12-15 19:37:21.928839"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "workouts" ("created_at", "level", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-12-15 19:37:21.934071"], ["level", 2], ["updated_at", "2014-12-15 19:37:21.934071"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "workouts" ("created_at", "level", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-12-15 19:38:36.048963"], ["level", 1], ["updated_at", "2014-12-15 19:38:36.048963"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "workouts" ("created_at", "level", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-12-15 19:38:36.055277"], ["level", 2], ["updated_at", "2014-12-15 19:38:36.055277"]]
+  [1m[36m (3.0ms)[0m  [1mCOMMIT[0m
