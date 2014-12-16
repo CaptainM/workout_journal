@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20141214013338) do
     t.integer "workout_id", null: false
   end
 
-  create_table "excercises", force: true do |t|
+  create_table "exercises", force: true do |t|
     t.string   "name"
     t.integer  "difficulty"
     t.integer  "reps"

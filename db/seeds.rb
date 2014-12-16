@@ -5,30 +5,30 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Workout.destroy_all
+Exercise.destroy_all
+
 f = File.open(ENV["PWD"]+"/db/workout.json")
 myjson = JSON.parse(f.read)
 
-workout_hash = myjson.values[0].map do |one_workout|
-	{
-		level: one_workout["level"].to_i
-	}
+myjson.values[0].each do |workout|
+	new_workout = Workout.create({ level: workout["level"].to_i })
+
+	workout["exercises"].each do |exercise|
+
+		exercise_hash = {
+			name: exercise["name"],
+			difficulty: exercise["difficulty"].to_i,
+			reps: exercise["reps"].to_i,
+			sets:exercise["sets"].to_i,
+			requirements: exercise["requirements"].join(","),
+			bodypart:exercise["bodypart"],
+			description:exercise["description"],
+			pounds: exercise["reps"].to_i,
+			workout_id: new_workout.id
+		}
+		Exercise.create(exercise_hash)
+	end
 end
 
-Workout.create(workout_hash)
 
-excercise_hash = myjson.values[0].map do |one_excercise|
-	
-	{
-		name: one_excercise["exercises"][0]["name"],
-		difficulty: one_excercise["exercises"][0]["difficulty"].to_i,
-		reps: one_excercise["exercises"][0]["reps"].to_i,
-		sets:one_excercise["exercises"][0]["sets"].to_i,
-		requirements: one_excercise["exercises"][0]["requirements"].join(","),
-		bodypart:one_excercise["exercises"][0]["bodypart"],
-		description:one_excercise["exercises"][0]["description"],
-		pounds: one_excercise["exercises"][0]["reps"].to_i,
-		workout_id: Workout.find(one_excercise["id"])
-	}
-end
-
-Excercise.create(excercise_hash)

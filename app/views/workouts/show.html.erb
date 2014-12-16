@@ -1,0 +1,26 @@
+<h1> Today's Date is: <%= Time.now.strftime("%m/%d/%Y") %> </h1>
+
+
+<div class="greybox">
+	<% @workout.exercises.each do |one_exercise| %>
+	  Name:
+	  <span class="exercise-value"><%= one_exercise.name %></span>
+	  <br>
+	  Description:
+	  <span class="exercise-value"><%= one_exercise.description %></span>
+	  <br>
+	  Requirements:
+	  <span class="exercise-value"><%= one_exercise.requirements %></span>
+	  <br>
+	  Sets: 
+	  <span class="exercise-value"><%= one_exercise.sets %></span>
+	  Reps:
+	  <span class="exercise-value"><%= one_exercise.reps %></span>
+	  Pounds:
+	  <span class="exercise-value"><%= one_exercise.pounds %></span>
+	  <br>
+	  Difficulty:
+	  <span class="exercise-value"><%= one_exercise.difficulty %></span>
+	  <br>
+  <% end %>
+</div>

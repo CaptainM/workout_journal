@@ -16,3 +16,15 @@
 body {
 	background-color: yellow;
 }
+
+.greybox
+{
+    margin-top: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #cccccc;
+    color: #333333;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    width: 500px;
+}
