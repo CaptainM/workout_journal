@@ -15,17 +15,18 @@
 //= require turbolinks
 //= require_tree .
 
-// function init() {
-// 	if ($('.exercise').length) {
-// 		fetchAndRenderExercises();
-// 	}
-// };
+function init() {
+	if ($('#exercises').length) {
+		fetchAndRenderExercises();
+	}
+};
 
-// $(init);
+$(init);
+$(document).on("page:load", init);
 
 $(function() {
-	console.log("loaded, bro");
-	fetchAndRenderExercises();
+	// console.log("loaded, bro");
+	// fetchAndRenderExercises();
 	$("#exercises").on("mouseenter", ".exercise-name", showDetails);
 	$("#exercises").on("mouseleave", ".exercise-name", hideDetails);
 });
@@ -48,10 +49,12 @@ function renderExercise(exerciseObject) {
 	var exerciseDescription = exerciseObject.description;
 	var exercisePound = exerciseObject.pounds;
 
+	//var sectionExercises = $("<section>").attr("id", "exercises");
 	var exerciseDiv = $("<div>").addClass("exercise exercise-id").attr("id", exerciseID);
 	var exerciseDisplay = $("<p>").text(exerciseName).addClass("exercise exercise-name");
 	exerciseDiv.append(exerciseDisplay);
 	$('#exercises').prepend(exerciseDiv);
+
 }
 
 function showDetails() {
