@@ -25,11 +25,17 @@ $(init);
 $(document).on("page:load", init);
 
 $(function() {
-	// console.log("loaded, bro");
-	// fetchAndRenderExercises();
 	$("#exercises").on("mouseenter", ".exercise-name", showDetails);
 	$("#exercises").on("mouseleave", ".exercise-name", hideDetails);
 });
+
+function getVideos() {
+	console.log("YOU MADE IT!");
+	console.log($(this).data("id"));
+	$.get("/search/" + $(this).data("id")).done(renderVideo);
+};
+
+
 
 
 function fetchAndRenderExercises() {
@@ -52,7 +58,9 @@ function renderExercise(exerciseObject) {
 	//var sectionExercises = $("<section>").attr("id", "exercises");
 	var exerciseDiv = $("<div>").addClass("exercise exercise-id").attr("id", exerciseID);
 	var exerciseDisplay = $("<p>").text(exerciseName).addClass("exercise exercise-name");
-	exerciseDiv.append(exerciseDisplay);
+	var video = $("<button>").text("Watch Video on " + exerciseName).data("id", exerciseName).attr("id", "button");
+	exerciseDiv.append(exerciseDisplay).append(video);
+	$("section").on("click",'button#button', getVideos);
 	$('#exercises').prepend(exerciseDiv);
 
 }

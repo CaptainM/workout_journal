@@ -31,6 +31,8 @@ gem 'rails_12factor', group: :production
 gem 'bcrypt', '~> 3.1.7'
 gem 'rspec'
 gem 'pry-rails'	
+gem 'youtube_it', '~> 2.4.2'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
