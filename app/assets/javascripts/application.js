@@ -26,7 +26,8 @@
 $(function() {
 	console.log("loaded, bro");
 	fetchAndRenderExercises();
-	$("#exercises").on("mouseover", ".exercise-name", showDetails);
+	$("#exercises").on("mouseenter", ".exercise-name", showDetails);
+	$("#exercises").on("mouseleave", ".exercise-name", hideDetails);
 });
 
 
@@ -49,27 +50,40 @@ function renderExercise(exerciseObject) {
 
 	var exerciseDiv = $("<div>").addClass("exercise exercise-id").attr("id", exerciseID);
 	var exerciseDisplay = $("<p>").text(exerciseName).addClass("exercise exercise-name");
-	var exerciseDifficulty = $("<span>").addClass("basic-detail").addClass("difficulty").attr("data-id", exerciseDiff);
-	var exerciseReps = $("<span>").addClass("basic-detail").addClass("reps").attr("data-id", exerciseRep);
-	var exerciseSets = $("<span>").addClass("basic-detail").addClass("sets").attr("data-id", exerciseSet);
-	var exerciseRequirements = $("<span>").addClass("basic-detail").addClass("requirements").attr("data-id", exerciseRequire);
-	var exerciseBodyParts = $("<span>").addClass("basic-detail").addClass("bodypart").attr("data-id", exerciseBodyPart);
-	var exerciseDescriptions = $("<span>").addClass("basic-detail").addClass("description").attr("data-id", exerciseDescription);
-	var exercisePounds = $("<span>").addClass("basic-detail").addClass("pounds").attr("data-id", exercisePound);
-	exerciseDiv.append(exerciseDisplay).append(exerciseDifficulty).append(exerciseReps).append(exerciseSets).append(exerciseRequirements).append(exerciseBodyParts).append(exerciseDescriptions).append(exercisePounds);
+	exerciseDiv.append(exerciseDisplay);
 	$('#exercises').prepend(exerciseDiv);
 }
 
 function showDetails() {
-	console.log(this);
+	//console.log(this);
 	var exerciseID = $(this).parent().attr("id");
-	fetchExercise(exerciseID);
-};
-
-function fetchExercise(exerciseID) {
-	$.ajax("/exercises/" + exerciseID + ".json").done(function() {
-		console.log("hi!");
+	//console.log(exerciseID);
+	
+	$.get("/exercises/" + exerciseID + ".json").done(function(data) {
+	 	//console.log(data.description);
+	 	var exerciseDescription = $("<p>").addClass("basic-detail").addClass("description").text("Description: " + data.description);("</p>")
+	 	var exerciseDifficulty = $("<p>").addClass("basic-detail").addClass("difficulty").text("Difficulty: " + data.difficulty);("</p>")
+	 	var exerciseReps = $("<p>").addClass("basic-detail").addClass("reps").text("Reps: " + data.reps);("</p>")
+	 	var exerciseSets = $("<p>").addClass("basic-detail").addClass("sets").text("Sets: " + data.sets);("</p>")
+	 	var exerciseRequirements = $("<p>").addClass("basic-detail").addClass("requirements").text("Requirements: " + data.requirements);("</p>")
+	 	var exerciseBodyParts = $("<p>").addClass("basic-detail").addClass("bodypart").text("Body-Part: " + data.bodypart);("</p>")
+	 	var exercisePounds = $("<p>").addClass("basic-detail").addClass("pounds").text("Recommended Weight: " + data.pounds + " pounds");("</p>")
+	 	//$("#" + exerciseID).append(data.difficulty)
+	 	$("#" + exerciseID).append(exerciseDescription)
+	 										.append(exerciseDifficulty)
+	 										.append(exerciseReps)
+	 										.append(exerciseSets)
+	 										.append(exerciseRequirements)
+	 										.append(exerciseBodyParts)
+	 										.append(exercisePounds);
+		//$("#" + exerciseID).append(exerciseBodyParts);
 	});
 };
+
+function hideDetails() {
+	var exerciseID = $(this).parent().attr("id");
+	$("#" + exerciseID).find(".basic-detail").empty();
+}
+
 
 
