@@ -33,8 +33,8 @@ function getVideos() {
 	console.log($(this).data("id"));
 	$.get("/search/" + $(this).data("id"), {
 		success: function(data) {
-			debugger;
 			var iFrame = $("<iframe>").width("420").height("315").attr('src', data);
+			//src is not refelected in the HTML on the browser--why?
 			$("#exercises").append(iFrame);
 		}
 	})
@@ -47,9 +47,6 @@ function getVideos() {
 	// });
 };
 
-function renderVideo() {
-	
-}
 
 function fetchAndRenderExercises() {
 	$.get("/exercises").done(function(data) {
@@ -74,6 +71,7 @@ function renderExercise(exerciseObject) {
 	var video = $("<button>").text("Watch Video on " + exerciseName).data("id", exerciseName).attr("id", "button");
 	exerciseDiv.append(exerciseDisplay).append(video);
 	$("section").on("click",'button#button', getVideos);
+	//This shouldn't be in a loop, it is making the call to get videos happen twice.
 	$('#exercises').prepend(exerciseDiv);
 
 }

@@ -13626,3 +13626,174 @@ Processing by ExercisesController#show as JSON
   Parameters: {"id"=>"4"}
   [1m[36mExercise Load (0.2ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1[0m  [["id", 4]]
 Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-17 20:07:00 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 391ms (Views: 388.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2014-12-17 20:07:01 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-17 20:07:01 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-17 20:07:01 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-17 20:07:01 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-17 20:07:01 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-17 20:07:01 -0500
+
+
+Started GET "/exercises" for 127.0.0.1 at 2014-12-17 20:07:01 -0500
+Processing by ExercisesController#index as */*
+  [1m[35mWorkout Load (329.0ms)[0m  SELECT "workouts".* FROM "workouts"
+  [1m[36mExercise Load (0.3ms)[0m  [1mSELECT "exercises".* FROM "exercises"  WHERE "exercises"."workout_id" = $1[0m  [["workout_id", 1]]
+Completed 200 OK in 754ms (Views: 10.4ms | ActiveRecord: 624.6ms)
+
+
+Started GET "/exercises/2.json" for 127.0.0.1 at 2014-12-17 20:07:05 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mExercise Load (0.3ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/search/v-press?success=undefined" for 127.0.0.1 at 2014-12-17 20:07:06 -0500
+Processing by ExercisesController#search as */*
+  Parameters: {"success"=>"undefined", "exercise"=>"v-press"}
+Completed 500 Internal Server Error in 2ms
+
+SyntaxError (/Users/Caroline/Repos/workout_journal/app/models/youtube.rb:5: syntax error, unexpected keyword_def, expecting ')'
+	def self.search(parameter)
+	   ^):
+  app/models/youtube.rb:5: syntax error, unexpected keyword_def, expecting ')'
+  app/controllers/exercises_controller.rb:14:in `search'
+
+
+  Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.9ms)
+  Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.9ms)
+  Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (67.3ms)
+
+
+Started GET "/search/v-press?success=undefined" for 127.0.0.1 at 2014-12-17 20:07:06 -0500
+Processing by ExercisesController#search as */*
+  Parameters: {"success"=>"undefined", "exercise"=>"v-press"}
+Completed 500 Internal Server Error in 2ms
+
+SyntaxError (/Users/Caroline/Repos/workout_journal/app/models/youtube.rb:5: syntax error, unexpected keyword_def, expecting ')'
+	def self.search(parameter)
+	   ^):
+  app/models/youtube.rb:5: syntax error, unexpected keyword_def, expecting ')'
+  app/controllers/exercises_controller.rb:14:in `search'
+
+
+  Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.8ms)
+  Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.9ms)
+  Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (17.3ms)
+
+
+Started GET "/exercises/2.json" for 127.0.0.1 at 2014-12-17 20:08:03 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mExercise Load (0.3ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-17 20:08:17 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 36ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-17 20:08:17 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-17 20:08:17 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-17 20:08:17 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-17 20:08:17 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-17 20:08:17 -0500
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2014-12-17 20:08:17 -0500
+
+
+Started GET "/exercises" for 127.0.0.1 at 2014-12-17 20:08:17 -0500
+Processing by ExercisesController#index as */*
+  [1m[35mWorkout Load (0.6ms)[0m  SELECT "workouts".* FROM "workouts"
+  [1m[36mExercise Load (0.5ms)[0m  [1mSELECT "exercises".* FROM "exercises"  WHERE "exercises"."workout_id" = $1[0m  [["workout_id", 1]]
+Completed 200 OK in 49ms (Views: 15.0ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/exercises/2.json" for 127.0.0.1 at 2014-12-17 20:08:19 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mExercise Load (0.2ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/search/v-press?success=undefined" for 127.0.0.1 at 2014-12-17 20:08:19 -0500
+Processing by ExercisesController#search as */*
+  Parameters: {"success"=>"undefined", "exercise"=>"v-press"}
+Completed 200 OK in 698ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/v-press?success=undefined" for 127.0.0.1 at 2014-12-17 20:08:20 -0500
+Processing by ExercisesController#search as */*
+  Parameters: {"success"=>"undefined", "exercise"=>"v-press"}
+Completed 200 OK in 697ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/exercises/2.json" for 127.0.0.1 at 2014-12-17 20:08:21 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mExercise Load (0.3ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/search/box%20jumps?success=undefined" for 127.0.0.1 at 2014-12-17 20:08:44 -0500
+Processing by ExercisesController#search as */*
+  Parameters: {"success"=>"undefined", "exercise"=>"box jumps"}
+Completed 200 OK in 753ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/exercises/1.json" for 127.0.0.1 at 2014-12-17 20:08:45 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mExercise Load (0.3ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/search/box%20jumps?success=undefined" for 127.0.0.1 at 2014-12-17 20:08:45 -0500
+Processing by ExercisesController#search as */*
+  Parameters: {"success"=>"undefined", "exercise"=>"box jumps"}
+Completed 200 OK in 645ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/exercises/1.json" for 127.0.0.1 at 2014-12-17 20:09:02 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mExercise Load (1.0ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/exercises/2.json" for 127.0.0.1 at 2014-12-17 20:09:03 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mExercise Load (0.3ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.3ms)
