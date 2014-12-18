@@ -30,13 +30,26 @@ $(function() {
 });
 
 function getVideos() {
-	console.log("YOU MADE IT!");
 	console.log($(this).data("id"));
-	$.get("/search/" + $(this).data("id")).done(renderVideo);
+	$.get("/search/" + $(this).data("id"), {
+		success: function(data) {
+			debugger;
+			var iFrame = $("<iframe>").width("420").height("315").attr('src', data);
+			$("#exercises").append(iFrame);
+		}
+	})
+
+	// .done(function(data) {
+	// 	debugger;
+	// 	var iFrame = $("<iframe>").width("420").height("315").src(data);
+	// 	$("#exercises").append(iFrame);
+	// 	// $ video.embed_html5 #default: width: 425, height: 350, frameborder: 0
+	// });
 };
 
-
-
+function renderVideo() {
+	
+}
 
 function fetchAndRenderExercises() {
 	$.get("/exercises").done(function(data) {
