@@ -29,9 +29,14 @@ gem 'rails_12factor', group: :production
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
-gem 'rspec'
+group :development do
+  gem 'rspec-rails'
+  gem 'rspec-collection_matchers'
+  gem 'shoulda-matchers', require: false
+end
 gem 'pry-rails'	
 gem 'youtube_it', '~> 2.4.2'
+gem 'jasmine', :group => [:development, :test]
 
 # Use unicorn as the app server
 # gem 'unicorn'

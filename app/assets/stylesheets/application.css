@@ -28,3 +28,20 @@ body {
     font-weight: bold;
     width: 500px;
 }
+
+div#modal {
+	min-width: 100%;
+	min-height: 90%;
+	background: rgba(0,0,0,.5);
+  position: absolute;
+  z-index: 10;
+  display: none;
+  text-align: center;
+}
+
+span#close {
+  float: right;
+  color: white;
+  font-size: 30px;
+}
+

@@ -27,24 +27,19 @@ $(document).on("page:load", init);
 $(function() {
 	$("#exercises").on("mouseenter", ".exercise-name", showDetails);
 	$("#exercises").on("mouseleave", ".exercise-name", hideDetails);
+	$("#exercises").on("click",'button#button', getVideos);
 });
 
 function getVideos() {
-	console.log($(this).data("id"));
-	$.get("/search/" + $(this).data("id"), {
-		success: function(data) {
-			var iFrame = $("<iframe>").width("420").height("315").attr('src', data);
-			//src is not refelected in the HTML on the browser--why?
-			$("#exercises").append(iFrame);
-		}
-	})
+	$('#close').click(function(){$(this).parent().hide()});
 
-	// .done(function(data) {
-	// 	debugger;
-	// 	var iFrame = $("<iframe>").width("420").height("315").src(data);
-	// 	$("#exercises").append(iFrame);
-	// 	// $ video.embed_html5 #default: width: 425, height: 350, frameborder: 0
-	// });
+	$.get("/search/" + $(this).data("id"))
+	 .done(function(data) {
+		$("iframe").remove();
+		var iFrame = $("<iframe>").width("420").height("315").attr('src', data.video_url);
+		
+		$("#modal").append(iFrame).show(500);
+	});
 };
 
 
@@ -57,32 +52,20 @@ function fetchAndRenderExercises() {
 function renderExercise(exerciseObject) {
 	var exerciseID = exerciseObject.id;
 	var exerciseName = exerciseObject.name;
-	var exerciseDiff = exerciseObject.difficulty;
-	var exerciseRep = exerciseObject.reps;
-	var exerciseSet = exerciseObject.sets;
-	var exerciseRequire = exerciseObject.requirements;
-	var exerciseBodyPart = exerciseObject.bodypart;
-	var exerciseDescription = exerciseObject.description;
-	var exercisePound = exerciseObject.pounds;
 
-	//var sectionExercises = $("<section>").attr("id", "exercises");
 	var exerciseDiv = $("<div>").addClass("exercise exercise-id").attr("id", exerciseID);
 	var exerciseDisplay = $("<p>").text(exerciseName).addClass("exercise exercise-name");
 	var video = $("<button>").text("Watch Video on " + exerciseName).data("id", exerciseName).attr("id", "button");
 	exerciseDiv.append(exerciseDisplay).append(video);
-	$("section").on("click",'button#button', getVideos);
-	//This shouldn't be in a loop, it is making the call to get videos happen twice.
 	$('#exercises').prepend(exerciseDiv);
 
 }
 
 function showDetails() {
-	//console.log(this);
 	var exerciseID = $(this).parent().attr("id");
-	//console.log(exerciseID);
 	
 	$.get("/exercises/" + exerciseID + ".json").done(function(data) {
-	 	//console.log(data.description);
+
 	 	var exerciseDescription = $("<p>").addClass("basic-detail").addClass("description").text("Description: " + data.description);("</p>")
 	 	var exerciseDifficulty = $("<p>").addClass("basic-detail").addClass("difficulty").text("Difficulty: " + data.difficulty);("</p>")
 	 	var exerciseReps = $("<p>").addClass("basic-detail").addClass("reps").text("Reps: " + data.reps);("</p>")
@@ -106,6 +89,14 @@ function hideDetails() {
 	var exerciseID = $(this).parent().attr("id");
 	$("#" + exerciseID).find(".basic-detail").empty();
 }
+
+function renderModal() {
+	$('#close').click(function(){$(this).parent().hide()});
+	var exerciseID = $(this).parent().attr("id");
+	var modal = $('#modal');
+
+};
+
 
 
 
