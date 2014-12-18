@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   resources :users, except: [:index]
   resources :exercises
+  get '/search/:exercise', to: 'exercises#search'
   resources :workouts
   #root 'workouts#show'
   root 'application#index'

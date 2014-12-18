@@ -25,11 +25,27 @@ $(init);
 $(document).on("page:load", init);
 
 $(function() {
-	// console.log("loaded, bro");
-	// fetchAndRenderExercises();
 	$("#exercises").on("mouseenter", ".exercise-name", showDetails);
 	$("#exercises").on("mouseleave", ".exercise-name", hideDetails);
 });
+
+function getVideos() {
+	console.log($(this).data("id"));
+	$.get("/search/" + $(this).data("id"), {
+		success: function(data) {
+			var iFrame = $("<iframe>").width("420").height("315").attr('src', data);
+			//src is not refelected in the HTML on the browser--why?
+			$("#exercises").append(iFrame);
+		}
+	})
+
+	// .done(function(data) {
+	// 	debugger;
+	// 	var iFrame = $("<iframe>").width("420").height("315").src(data);
+	// 	$("#exercises").append(iFrame);
+	// 	// $ video.embed_html5 #default: width: 425, height: 350, frameborder: 0
+	// });
+};
 
 
 function fetchAndRenderExercises() {
@@ -52,7 +68,10 @@ function renderExercise(exerciseObject) {
 	//var sectionExercises = $("<section>").attr("id", "exercises");
 	var exerciseDiv = $("<div>").addClass("exercise exercise-id").attr("id", exerciseID);
 	var exerciseDisplay = $("<p>").text(exerciseName).addClass("exercise exercise-name");
-	exerciseDiv.append(exerciseDisplay);
+	var video = $("<button>").text("Watch Video on " + exerciseName).data("id", exerciseName).attr("id", "button");
+	exerciseDiv.append(exerciseDisplay).append(video);
+	$("section").on("click",'button#button', getVideos);
+	//This shouldn't be in a loop, it is making the call to get videos happen twice.
 	$('#exercises').prepend(exerciseDiv);
 
 }

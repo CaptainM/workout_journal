@@ -10,5 +10,11 @@ class ExercisesController < ApplicationController
 		render json: @exercise
 	end
 
+	def search
+		@parameter = Youtube.search(params[:exercise])
+		render json: @parameter
+		puts @parameter.inspect
+	end
+
 
 end

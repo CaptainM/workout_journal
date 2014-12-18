@@ -16,11 +16,6 @@ ActiveRecord::Schema.define(version: 20141214013338) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "Users_Workouts", id: false, force: true do |t|
-    t.integer "user_id",    null: false
-    t.integer "workout_id", null: false
-  end
-
   create_table "exercises", force: true do |t|
     t.string   "name"
     t.integer  "difficulty"
@@ -42,6 +37,11 @@ ActiveRecord::Schema.define(version: 20141214013338) do
     t.integer  "age"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "users_workouts", id: false, force: true do |t|
+    t.integer "user_id",    null: false
+    t.integer "workout_id", null: false
   end
 
   create_table "workouts", force: true do |t|
