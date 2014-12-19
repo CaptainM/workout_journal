@@ -13,20 +13,26 @@
  *= require_tree .
  *= require_self
  */
+
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400);
 body {
-	background-color: yellow;
+  background: #B3FFEB;
+  font-family: Josefin Sans;
+  text-align: center;
 }
 
 .greybox
 {
     margin-top: 20px;
+    margin-left: 130px;
     background-color: #f7f7f7;
     border: 1px solid #cccccc;
     color: #333333;
-    padding: 10px;
+    padding: 20px;
     font-size: 13px;
     font-weight: bold;
-    width: 500px;
+    width: 70%;
+    text-align: center;
 }
 
 div#modal {
