@@ -19643,3 +19643,68 @@ Processing by ExercisesController#show as JSON
   Parameters: {"id"=>"4"}
   [1m[35mExercise Load (0.2ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1  [["id", 4]]
 Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exercises/3.json" for 127.0.0.1 at 2014-12-19 09:07:22 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mExercise Load (0.2ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-19 09:10:13 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 69ms (Views: 68.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-19 09:10:13 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-19 09:10:13 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-19 09:10:13 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-19 09:10:13 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-19 09:10:13 -0500
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2014-12-19 09:10:13 -0500
+
+
+Started GET "/exercises" for 127.0.0.1 at 2014-12-19 09:10:13 -0500
+Processing by ExercisesController#index as */*
+  [1m[35mWorkout Load (0.3ms)[0m  SELECT "workouts".* FROM "workouts"
+  [1m[36mExercise Load (0.2ms)[0m  [1mSELECT "exercises".* FROM "exercises"  WHERE "exercises"."workout_id" = $1[0m  [["workout_id", 2]]
+Completed 200 OK in 112ms (Views: 8.9ms | ActiveRecord: 78.1ms)
+
+
+Started GET "/exercises/4.json" for 127.0.0.1 at 2014-12-19 09:10:14 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[35mExercise Load (0.2ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1  [["id", 4]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exercises/4.json" for 127.0.0.1 at 2014-12-19 09:10:15 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mExercise Load (0.2ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1[0m  [["id", 4]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exercises/4.json" for 127.0.0.1 at 2014-12-19 09:10:16 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[35mExercise Load (0.2ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1  [["id", 4]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/search/assisted%20dips" for 127.0.0.1 at 2014-12-19 09:10:16 -0500
+Processing by ExercisesController#search as */*
+  Parameters: {"exercise"=>"assisted dips"}
+Completed 200 OK in 1093ms (Views: 0.2ms | ActiveRecord: 0.0ms)
