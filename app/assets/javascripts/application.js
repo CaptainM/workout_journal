@@ -15,6 +15,10 @@
 //= require turbolinks
 //= require_tree .
 
+function thisIsATest() {
+	return("hello world");
+};
+
 function init() {
 	if ($('#exercises').length) {
 		fetchAndRenderExercises();
@@ -81,7 +85,6 @@ function showDetails() {
 	 										.append(exerciseRequirements)
 	 										.append(exerciseBodyParts)
 	 										.append(exercisePounds);
-		//$("#" + exerciseID).append(exerciseBodyParts);
 	});
 };
 
@@ -90,12 +93,7 @@ function hideDetails() {
 	$("#" + exerciseID).find(".basic-detail").empty();
 }
 
-function renderModal() {
-	$('#close').click(function(){$(this).parent().hide()});
-	var exerciseID = $(this).parent().attr("id");
-	var modal = $('#modal');
 
-};
 
 
 
