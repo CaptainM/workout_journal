@@ -32,7 +32,20 @@ $(function() {
 	$("#exercises").on("mouseenter", ".exercise-name", showDetails);
 	$("#exercises").on("mouseleave", ".exercise-name", hideDetails);
 	$("#exercises").on("click",'button#button', getVideos);
+	$("#exercises").on("click", 'button#secondButton', workoutCompleted);
 });
+
+function workoutCompleted() {
+	console.log($(this).data("id"));
+	$.ajax({
+		url: '/user_completed_workout/' + $(this).data("id"),
+		type: 'put'
+	})
+		.done();//do I need anything here? What I want it to do is in the controller);
+};
+
+
+
 
 function getVideos() {
 	$('#close').click(function(){$(this).parent().hide()});
@@ -55,13 +68,16 @@ function fetchAndRenderExercises() {
 
 function renderExercise(exerciseObject) {
 	var exerciseID = exerciseObject.id;
+	var workoutID = exerciseObject.workout_id;
 	var exerciseName = exerciseObject.name;
 
 	var exerciseDiv = $("<div>").addClass("exercise exercise-id").attr("id", exerciseID);
 	var exerciseDisplay = $("<p>").text(exerciseName).addClass("exercise exercise-name");
 	var video = $("<button>").text("Watch Video on " + exerciseName).data("id", exerciseName).attr("id", "button");
+	var completed = $("<button>").text("Workout " + workoutID + " Completed").data("id", workoutID).attr("id", "secondButton");
 	exerciseDiv.append(exerciseDisplay).append(video);
 	$('#exercises').prepend(exerciseDiv);
+	$('#exercises').append(completed);
 
 }
 

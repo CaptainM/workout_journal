@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :users, except: [:index, :edit]
   resources :exercises
   get '/search/:exercise', to: 'exercises#search'
+  put '/user_completed_workout/:workout_id', to: 'exercises#user_completed_workout'
   resources :workouts
   #root 'workouts#show'
   root 'application#index'

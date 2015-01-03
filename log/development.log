@@ -21488,3 +21488,1310 @@ Processing by ExercisesController#index as */*
   [1m[36mWorkout Load (0.4ms)[0m  [1mSELECT "workouts".* FROM "workouts"[0m
   [1m[35mExercise Load (0.2ms)[0m  SELECT "exercises".* FROM "exercises"  WHERE "exercises"."workout_id" = $1  [["workout_id", 1]]
 Completed 200 OK in 20ms (Views: 6.5ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-03 17:03:00 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (2.3ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+Completed 200 OK in 428ms (Views: 406.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-03 17:03:02 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-03 17:03:02 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-03 17:03:02 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-03 17:03:02 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-03 17:03:02 -0500
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2015-01-03 17:03:02 -0500
+
+
+Started GET "/exercises" for 127.0.0.1 at 2015-01-03 17:03:02 -0500
+Processing by ExercisesController#index as */*
+  [1m[36mWorkout Load (0.6ms)[0m  [1mSELECT "workouts".* FROM "workouts"[0m
+  [1m[35mExercise Load (0.3ms)[0m  SELECT "exercises".* FROM "exercises"  WHERE "exercises"."workout_id" = $1  [["workout_id", 2]]
+Completed 200 OK in 59ms (Views: 11.2ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-03 17:07:41 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+Completed 200 OK in 111ms (Views: 109.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-03 17:07:57 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+Completed 200 OK in 53ms (Views: 52.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-03 17:07:57 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-03 17:07:57 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-03 17:07:57 -0500
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2015-01-03 17:07:57 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-03 17:07:57 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-03 17:07:57 -0500
+
+
+Started GET "/exercises" for 127.0.0.1 at 2015-01-03 17:07:57 -0500
+Processing by ExercisesController#index as */*
+  [1m[36mWorkout Load (0.3ms)[0m  [1mSELECT "workouts".* FROM "workouts"[0m
+  [1m[35mExercise Load (0.4ms)[0m  SELECT "exercises".* FROM "exercises"  WHERE "exercises"."workout_id" = $1  [["workout_id", 1]]
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/exercises/2.json" for 127.0.0.1 at 2015-01-03 17:08:01 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mExercise Load (0.3ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/exercises/2.json" for 127.0.0.1 at 2015-01-03 17:08:01 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mExercise Load (0.3ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-03 17:08:10 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+Completed 200 OK in 33ms (Views: 32.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2015-01-03 17:08:10 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-03 17:08:10 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-03 17:08:10 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-03 17:08:10 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-03 17:08:10 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-03 17:08:10 -0500
+
+
+Started GET "/exercises" for 127.0.0.1 at 2015-01-03 17:08:11 -0500
+Processing by ExercisesController#index as */*
+  [1m[35mWorkout Load (0.3ms)[0m  SELECT "workouts".* FROM "workouts"
+  [1m[36mExercise Load (0.4ms)[0m  [1mSELECT "exercises".* FROM "exercises"  WHERE "exercises"."workout_id" = $1[0m  [["workout_id", 1]]
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/exercises/2.json" for 127.0.0.1 at 2015-01-03 17:08:16 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mExercise Load (0.3ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/exercises/1.json" for 127.0.0.1 at 2015-01-03 17:08:17 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mExercise Load (0.3ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/exercises/1.json" for 127.0.0.1 at 2015-01-03 17:08:18 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mExercise Load (0.3ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/exercises/1.json" for 127.0.0.1 at 2015-01-03 17:08:19 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mExercise Load (0.3ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/exercises/1.json" for 127.0.0.1 at 2015-01-03 17:08:19 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mExercise Load (0.3ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-03 17:08:51 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+Completed 200 OK in 102ms (Views: 101.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-03 17:08:51 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-03 17:08:51 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-03 17:08:51 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-03 17:08:51 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-03 17:08:51 -0500
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2015-01-03 17:08:51 -0500
+
+
+Started GET "/exercises" for 127.0.0.1 at 2015-01-03 17:08:51 -0500
+Processing by ExercisesController#index as */*
+  [1m[35mWorkout Load (0.4ms)[0m  SELECT "workouts".* FROM "workouts"
+  [1m[36mExercise Load (0.4ms)[0m  [1mSELECT "exercises".* FROM "exercises"  WHERE "exercises"."workout_id" = $1[0m  [["workout_id", 1]]
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-03 17:09:30 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+Completed 200 OK in 53ms (Views: 52.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-03 17:09:30 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-03 17:09:30 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-03 17:09:30 -0500
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2015-01-03 17:09:30 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-03 17:09:30 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-03 17:09:30 -0500
+
+
+Started GET "/exercises" for 127.0.0.1 at 2015-01-03 17:09:30 -0500
+Processing by ExercisesController#index as */*
+  [1m[36mWorkout Load (0.4ms)[0m  [1mSELECT "workouts".* FROM "workouts"[0m
+  [1m[35mExercise Load (0.3ms)[0m  SELECT "exercises".* FROM "exercises"  WHERE "exercises"."workout_id" = $1  [["workout_id", 1]]
+Completed 200 OK in 6ms (Views: 2.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/exercises/2.json" for 127.0.0.1 at 2015-01-03 17:09:32 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mExercise Load (0.2ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-03 17:10:41 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+Completed 200 OK in 61ms (Views: 60.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-03 17:10:41 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-03 17:10:41 -0500
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2015-01-03 17:10:41 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-03 17:10:41 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-03 17:10:41 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-03 17:10:41 -0500
+
+
+Started GET "/exercises" for 127.0.0.1 at 2015-01-03 17:10:41 -0500
+Processing by ExercisesController#index as */*
+  [1m[36mWorkout Load (1.1ms)[0m  [1mSELECT "workouts".* FROM "workouts"[0m
+  [1m[35mExercise Load (0.4ms)[0m  SELECT "exercises".* FROM "exercises"  WHERE "exercises"."workout_id" = $1  [["workout_id", 2]]
+Completed 200 OK in 6ms (Views: 2.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/exercises/4.json" for 127.0.0.1 at 2015-01-03 17:10:43 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mExercise Load (0.2ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1[0m  [["id", 4]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exercises/3.json" for 127.0.0.1 at 2015-01-03 17:10:43 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[35mExercise Load (0.2ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exercises/3.json" for 127.0.0.1 at 2015-01-03 17:10:46 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mExercise Load (0.2ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exercises/4.json" for 127.0.0.1 at 2015-01-03 17:10:46 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[35mExercise Load (0.2ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1  [["id", 4]]
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-03 17:11:31 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+Completed 200 OK in 47ms (Views: 46.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-03 17:11:31 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-03 17:11:31 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-03 17:11:31 -0500
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2015-01-03 17:11:31 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-03 17:11:31 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-03 17:11:31 -0500
+
+
+Started GET "/exercises" for 127.0.0.1 at 2015-01-03 17:11:31 -0500
+Processing by ExercisesController#index as */*
+  [1m[35mWorkout Load (0.4ms)[0m  SELECT "workouts".* FROM "workouts"
+  [1m[36mExercise Load (0.4ms)[0m  [1mSELECT "exercises".* FROM "exercises"  WHERE "exercises"."workout_id" = $1[0m  [["workout_id", 2]]
+Completed 200 OK in 7ms (Views: 3.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/exercises/3.json" for 127.0.0.1 at 2015-01-03 17:11:33 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[35mExercise Load (0.4ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/exercises/3.json" for 127.0.0.1 at 2015-01-03 17:11:33 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mExercise Load (0.2ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exercises/3.json" for 127.0.0.1 at 2015-01-03 17:11:35 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[35mExercise Load (0.2ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exercises/3.json" for 127.0.0.1 at 2015-01-03 17:11:37 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mExercise Load (0.2ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exercises/3.json" for 127.0.0.1 at 2015-01-03 17:11:39 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[35mExercise Load (0.2ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-03 17:17:03 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+Completed 200 OK in 138ms (Views: 137.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-03 17:17:03 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-03 17:17:03 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-03 17:17:03 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-03 17:17:03 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-03 17:17:03 -0500
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2015-01-03 17:17:03 -0500
+
+
+Started GET "/exercises" for 127.0.0.1 at 2015-01-03 17:17:03 -0500
+Processing by ExercisesController#index as */*
+  [1m[35mWorkout Load (0.3ms)[0m  SELECT "workouts".* FROM "workouts"
+  [1m[36mExercise Load (0.2ms)[0m  [1mSELECT "exercises".* FROM "exercises"  WHERE "exercises"."workout_id" = $1[0m  [["workout_id", 2]]
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/exercises/4.json" for 127.0.0.1 at 2015-01-03 17:17:05 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[35mExercise Load (0.2ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1  [["id", 4]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exercises/3.json" for 127.0.0.1 at 2015-01-03 17:17:05 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mExercise Load (0.2ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-03 17:32:18 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+Completed 200 OK in 66ms (Views: 65.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-03 17:32:19 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-03 17:32:19 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-03 17:32:19 -0500
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2015-01-03 17:32:19 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-03 17:32:19 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-03 17:32:19 -0500
+
+
+Started GET "/exercises" for 127.0.0.1 at 2015-01-03 17:32:19 -0500
+Processing by ExercisesController#index as */*
+  [1m[36mWorkout Load (0.3ms)[0m  [1mSELECT "workouts".* FROM "workouts"[0m
+  [1m[35mExercise Load (0.3ms)[0m  SELECT "exercises".* FROM "exercises"  WHERE "exercises"."workout_id" = $1  [["workout_id", 2]]
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exercises/4.json" for 127.0.0.1 at 2015-01-03 17:32:19 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mExercise Load (0.2ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1[0m  [["id", 4]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exercises/3.json" for 127.0.0.1 at 2015-01-03 17:32:20 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[35mExercise Load (0.2ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-03 17:33:12 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+Completed 200 OK in 65ms (Views: 64.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-03 17:33:12 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-03 17:33:12 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-03 17:33:12 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-03 17:33:12 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-03 17:33:12 -0500
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2015-01-03 17:33:12 -0500
+
+
+Started GET "/exercises" for 127.0.0.1 at 2015-01-03 17:33:13 -0500
+Processing by ExercisesController#index as */*
+  [1m[35mWorkout Load (0.3ms)[0m  SELECT "workouts".* FROM "workouts"
+  [1m[36mExercise Load (0.3ms)[0m  [1mSELECT "exercises".* FROM "exercises"  WHERE "exercises"."workout_id" = $1[0m  [["workout_id", 1]]
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exercises/2.json" for 127.0.0.1 at 2015-01-03 17:33:13 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mExercise Load (0.2ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exercises/1.json" for 127.0.0.1 at 2015-01-03 17:33:13 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mExercise Load (0.2ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exercises/1.json" for 127.0.0.1 at 2015-01-03 17:33:17 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mExercise Load (0.2ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-03 17:33:54 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+Completed 200 OK in 81ms (Views: 79.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-03 17:33:54 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-03 17:33:54 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-03 17:33:54 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-03 17:33:54 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-03 17:33:54 -0500
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2015-01-03 17:33:54 -0500
+
+
+Started GET "/exercises" for 127.0.0.1 at 2015-01-03 17:33:54 -0500
+Processing by ExercisesController#index as */*
+  [1m[35mWorkout Load (0.4ms)[0m  SELECT "workouts".* FROM "workouts"
+  [1m[36mExercise Load (0.3ms)[0m  [1mSELECT "exercises".* FROM "exercises"  WHERE "exercises"."workout_id" = $1[0m  [["workout_id", 1]]
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exercises/2.json" for 127.0.0.1 at 2015-01-03 17:33:55 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mExercise Load (0.2ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exercises/1.json" for 127.0.0.1 at 2015-01-03 17:33:58 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mExercise Load (0.2ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exercises/1.json" for 127.0.0.1 at 2015-01-03 17:34:01 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mExercise Load (0.2ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-03 17:40:31 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+Completed 200 OK in 84ms (Views: 81.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-03 17:40:31 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-03 17:40:31 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-03 17:40:31 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-03 17:40:31 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-03 17:40:31 -0500
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2015-01-03 17:40:31 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-03 17:40:58 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+Completed 200 OK in 50ms (Views: 48.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-03 17:40:58 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-03 17:40:58 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-03 17:40:58 -0500
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2015-01-03 17:40:58 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-03 17:40:58 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-03 17:40:58 -0500
+
+
+Started GET "/exercises" for 127.0.0.1 at 2015-01-03 17:40:58 -0500
+Processing by ExercisesController#index as */*
+  [1m[36mWorkout Load (0.3ms)[0m  [1mSELECT "workouts".* FROM "workouts"[0m
+  [1m[35mExercise Load (0.2ms)[0m  SELECT "exercises".* FROM "exercises"  WHERE "exercises"."workout_id" = $1  [["workout_id", 2]]
+Completed 200 OK in 60ms (Views: 8.7ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/exercises/4.json" for 127.0.0.1 at 2015-01-03 17:41:00 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mExercise Load (0.2ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1[0m  [["id", 4]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exercises/4.json" for 127.0.0.1 at 2015-01-03 17:41:07 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[35mExercise Load (0.3ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1  [["id", 4]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/exercises/4.json" for 127.0.0.1 at 2015-01-03 17:41:07 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mExercise Load (0.2ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1[0m  [["id", 4]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exercises/3.json" for 127.0.0.1 at 2015-01-03 17:41:07 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[35mExercise Load (0.2ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/user_completed_workout/2" for 127.0.0.1 at 2015-01-03 17:41:09 -0500
+
+AbstractController::ActionNotFound (The action 'user_completed_workout' could not be found for ExercisesController):
+  actionpack (4.1.7) lib/abstract_controller/base.rb:131:in `process'
+  actionview (4.1.7) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.7) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.7) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.7) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.7) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.7) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.7) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.7) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.7) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.7) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.7) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.7) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.7) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.7) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/unknown_action.text.erb (0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-03 17:42:24 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+Completed 200 OK in 41ms (Views: 38.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-03 17:42:24 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-03 17:42:24 -0500
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2015-01-03 17:42:24 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-03 17:42:24 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-03 17:42:24 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-03 17:42:24 -0500
+
+
+Started GET "/exercises" for 127.0.0.1 at 2015-01-03 17:42:24 -0500
+Processing by ExercisesController#index as */*
+  [1m[35mWorkout Load (0.4ms)[0m  SELECT "workouts".* FROM "workouts"
+  [1m[36mExercise Load (0.2ms)[0m  [1mSELECT "exercises".* FROM "exercises"  WHERE "exercises"."workout_id" = $1[0m  [["workout_id", 2]]
+Completed 200 OK in 41ms (Views: 10.1ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/exercises/4.json" for 127.0.0.1 at 2015-01-03 17:42:25 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[35mExercise Load (0.2ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1  [["id", 4]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exercises/3.json" for 127.0.0.1 at 2015-01-03 17:42:25 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mExercise Load (0.2ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/user_completed_workout/2" for 127.0.0.1 at 2015-01-03 17:42:27 -0500
+Processing by ExercisesController#user_completed_workout as */*
+  Parameters: {"workout_id"=>"2"}
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/exercises_controller.rb:21:in `user_completed_workout'
+
+
+  Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.8ms)
+  Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.9ms)
+  Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (106.6ms)
+
+
+Started GET "/exercises/4.json" for 127.0.0.1 at 2015-01-03 17:42:33 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[35mExercise Load (0.2ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1  [["id", 4]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-03 17:44:10 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+Completed 200 OK in 46ms (Views: 43.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-03 17:44:10 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-03 17:44:10 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-03 17:44:10 -0500
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2015-01-03 17:44:10 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-03 17:44:10 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-03 17:44:10 -0500
+
+
+Started GET "/exercises" for 127.0.0.1 at 2015-01-03 17:44:10 -0500
+Processing by ExercisesController#index as */*
+  [1m[35mWorkout Load (0.5ms)[0m  SELECT "workouts".* FROM "workouts"
+  [1m[36mExercise Load (0.3ms)[0m  [1mSELECT "exercises".* FROM "exercises"  WHERE "exercises"."workout_id" = $1[0m  [["workout_id", 1]]
+Completed 200 OK in 41ms (Views: 9.4ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/exercises/2.json" for 127.0.0.1 at 2015-01-03 17:44:11 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mExercise Load (0.2ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exercises/1.json" for 127.0.0.1 at 2015-01-03 17:44:11 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mExercise Load (0.2ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/user_completed_workout/1" for 127.0.0.1 at 2015-01-03 17:44:13 -0500
+Processing by ExercisesController#user_completed_workout as */*
+  Parameters: {"workout_id"=>"1"}
+Completed 500 Internal Server Error in 6ms
+
+ActionView::MissingTemplate (Missing template exercises/user_completed_workout, application/user_completed_workout with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :png, :jpeg, :gif, :bmp, :tiff, :mpeg, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/Caroline/Repos/workout_journal/app/views"
+):
+  actionview (4.1.7) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.1.7) lib/action_view/lookup_context.rb:124:in `find'
+  actionview (4.1.7) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.1.7) lib/action_view/renderer/template_renderer.rb:41:in `determine_template'
+  actionview (4.1.7) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.1.7) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.1.7) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.1.7) lib/action_view/rendering.rb:99:in `_render_template'
+  actionpack (4.1.7) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.1.7) lib/action_view/rendering.rb:82:in `render_to_body'
+  actionpack (4.1.7) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.1.7) lib/action_controller/metal/renderers.rb:32:in `render_to_body'
+  actionpack (4.1.7) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.1.7) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.1.7) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.1.7) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.1.7) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.1.7) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.1.7) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.1.7) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.1.7) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.1.7) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.1.7) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.1.7) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.7) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.7) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:149:in `block in halting_and_conditional'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.7) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.7) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.7) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.7) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.7) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.7) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.7) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.7) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.7) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.7) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.7) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.7) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.7) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.7) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.7) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.7) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.7) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.7) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.7) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.7) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.7) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.7) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.7) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.7) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/missing_template.text.erb (0.6ms)
+
+
+Started GET "/exercises/1.json" for 127.0.0.1 at 2015-01-03 17:44:17 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mExercise Load (0.3ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-03 17:47:03 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+Completed 200 OK in 84ms (Views: 81.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-03 17:47:04 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-03 17:47:04 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-03 17:47:04 -0500
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2015-01-03 17:47:04 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-03 17:47:04 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-03 17:47:04 -0500
+
+
+Started GET "/exercises" for 127.0.0.1 at 2015-01-03 17:47:04 -0500
+Processing by ExercisesController#index as */*
+  [1m[35mWorkout Load (0.3ms)[0m  SELECT "workouts".* FROM "workouts"
+  [1m[36mExercise Load (0.2ms)[0m  [1mSELECT "exercises".* FROM "exercises"  WHERE "exercises"."workout_id" = $1[0m  [["workout_id", 2]]
+Completed 200 OK in 33ms (Views: 13.5ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-03 17:48:56 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+Completed 200 OK in 56ms (Views: 53.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-03 17:48:56 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-03 17:48:56 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-03 17:48:56 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-03 17:48:56 -0500
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2015-01-03 17:48:56 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-03 17:48:56 -0500
+
+
+Started GET "/exercises" for 127.0.0.1 at 2015-01-03 17:48:57 -0500
+Processing by ExercisesController#index as */*
+  [1m[36mWorkout Load (0.4ms)[0m  [1mSELECT "workouts".* FROM "workouts"[0m
+  [1m[35mExercise Load (0.3ms)[0m  SELECT "exercises".* FROM "exercises"  WHERE "exercises"."workout_id" = $1  [["workout_id", 1]]
+Completed 200 OK in 31ms (Views: 11.9ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/exercises/2.json" for 127.0.0.1 at 2015-01-03 17:48:58 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mExercise Load (0.2ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/user_completed_workout/1" for 127.0.0.1 at 2015-01-03 17:49:01 -0500
+Processing by ExercisesController#user_completed_workout as */*
+  Parameters: {"workout_id"=>"1"}
+Completed 500 Internal Server Error in 7ms
+
+ActionView::MissingTemplate (Missing template exercises/user_completed_workout, application/user_completed_workout with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :png, :jpeg, :gif, :bmp, :tiff, :mpeg, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/Caroline/Repos/workout_journal/app/views"
+):
+  actionview (4.1.7) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.1.7) lib/action_view/lookup_context.rb:124:in `find'
+  actionview (4.1.7) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.1.7) lib/action_view/renderer/template_renderer.rb:41:in `determine_template'
+  actionview (4.1.7) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.1.7) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.1.7) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.1.7) lib/action_view/rendering.rb:99:in `_render_template'
+  actionpack (4.1.7) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.1.7) lib/action_view/rendering.rb:82:in `render_to_body'
+  actionpack (4.1.7) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.1.7) lib/action_controller/metal/renderers.rb:32:in `render_to_body'
+  actionpack (4.1.7) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.1.7) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.1.7) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.1.7) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.1.7) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.1.7) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.1.7) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.1.7) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.1.7) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.1.7) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.1.7) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.1.7) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.7) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.7) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:149:in `block in halting_and_conditional'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.7) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.7) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.7) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.7) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.7) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.7) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.7) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.7) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.7) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.7) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.7) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.7) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.7) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.7) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.7) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.7) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.7) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.7) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.7) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.7) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.7) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.7) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.7) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.7) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/missing_template.text.erb (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-03 17:50:05 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+Completed 200 OK in 40ms (Views: 38.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-03 17:50:06 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-03 17:50:06 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-03 17:50:06 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-03 17:50:06 -0500
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2015-01-03 17:50:06 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-03 17:50:06 -0500
+
+
+Started GET "/exercises" for 127.0.0.1 at 2015-01-03 17:50:06 -0500
+Processing by ExercisesController#index as */*
+  [1m[36mWorkout Load (0.3ms)[0m  [1mSELECT "workouts".* FROM "workouts"[0m
+  [1m[35mExercise Load (0.2ms)[0m  SELECT "exercises".* FROM "exercises"  WHERE "exercises"."workout_id" = $1  [["workout_id", 2]]
+Completed 200 OK in 30ms (Views: 11.2ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/exercises/4.json" for 127.0.0.1 at 2015-01-03 17:50:07 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mExercise Load (0.2ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1[0m  [["id", 4]]
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exercises/3.json" for 127.0.0.1 at 2015-01-03 17:50:07 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[35mExercise Load (0.2ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/user_completed_workout/2" for 127.0.0.1 at 2015-01-03 17:50:08 -0500
+Processing by ExercisesController#user_completed_workout as */*
+  Parameters: {"workout_id"=>"2"}
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/exercises_controller.rb:21:in `user_completed_workout'
+
+
+  Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.8ms)
+  Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (14.4ms)
+
+
+Started GET "/exercises/3.json" for 127.0.0.1 at 2015-01-03 17:50:10 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mExercise Load (0.3ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-03 17:50:49 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+Completed 200 OK in 40ms (Views: 37.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-03 17:50:49 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-03 17:50:49 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-03 17:50:49 -0500
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2015-01-03 17:50:49 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-03 17:50:49 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-03 17:50:49 -0500
+
+
+Started GET "/exercises" for 127.0.0.1 at 2015-01-03 17:50:49 -0500
+Processing by ExercisesController#index as */*
+  [1m[36mWorkout Load (0.4ms)[0m  [1mSELECT "workouts".* FROM "workouts"[0m
+  [1m[35mExercise Load (0.2ms)[0m  SELECT "exercises".* FROM "exercises"  WHERE "exercises"."workout_id" = $1  [["workout_id", 1]]
+Completed 200 OK in 34ms (Views: 12.7ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/exercises/1.json" for 127.0.0.1 at 2015-01-03 17:50:50 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mExercise Load (0.2ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/user_completed_workout/1" for 127.0.0.1 at 2015-01-03 17:50:51 -0500
+Processing by ExercisesController#user_completed_workout as */*
+  Parameters: {"workout_id"=>"1"}
+Completed 404 Not Found in 12ms
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/exercises_controller.rb:21:in `user_completed_workout'
+
+
+  Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.9ms)
+  Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (14.6ms)
+
+
+Started GET "/exercises/1.json" for 127.0.0.1 at 2015-01-03 17:51:02 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mExercise Load (0.3ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/exercises/1.json" for 127.0.0.1 at 2015-01-03 17:51:37 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mExercise Load (0.2ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 12ms (Views: 0.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/exercises/1.json" for 127.0.0.1 at 2015-01-03 17:51:41 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mExercise Load (0.2ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exercises/2.json" for 127.0.0.1 at 2015-01-03 17:51:41 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mExercise Load (0.2ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exercises/2.json" for 127.0.0.1 at 2015-01-03 17:51:41 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mExercise Load (0.2ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exercises/2.json" for 127.0.0.1 at 2015-01-03 17:51:43 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mExercise Load (0.2ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exercises/2.json" for 127.0.0.1 at 2015-01-03 17:51:43 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mExercise Load (0.2ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exercises/1.json" for 127.0.0.1 at 2015-01-03 17:51:44 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mExercise Load (0.2ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exercises/2.json" for 127.0.0.1 at 2015-01-03 17:56:18 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mExercise Load (0.2ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exercises/2.json" for 127.0.0.1 at 2015-01-03 17:56:18 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mExercise Load (0.2ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
