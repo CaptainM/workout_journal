@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
 	
 	before_action :authenticate, except: [:new, :create]
-
+	before_action :current_user, only: [:destroy]
+	
 	def show 
 		@user = User.find(params[:id])
 	end
