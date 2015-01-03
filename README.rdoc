@@ -1,30 +1,15 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Caroline Morgan
 
-Things you may want to cover:
+Workout Journal is a web-app that supplies the user with a daily workout.  If the user is unsure what the workout entails, the user can hover over the workout name to see the details of that workout.  They can also view a youtube video to be reminded what the correct form is for that workout. 
 
-* Ruby version
+Workout Journal was developed using Ruby on Rails Web Development Framework version 4.1.7, Postgresql for Database Management and Active Record for Object Relational Mapping.  In addtion, I used the ruby gem youtube_it to access the Youtube API. 
 
-* System dependencies
+Workout Jounal is primarily a single page application, although it does use other routes for user flow.  As such, I utilized Javascript and included the jquery-rails gem.  
 
-* Configuration
+To test my app, I used 'jasmine' to test my Javascript and 'rspec-rails' to test my ruby models. 
 
-* Database creation
+Users are required to sign in before recieving their workout of the day. 
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
-
-Link to my ERD https://www.lucidchart.com/invitations/accept/3d01cc4d-7ee7-404b-9140-5ccb91aff236
+Link to the ERD https://www.lucidchart.com/invitations/accept/3d01cc4d-7ee7-404b-9140-5ccb91aff236
