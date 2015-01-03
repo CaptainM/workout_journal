@@ -6,4 +6,9 @@ class ApplicationController < ActionController::Base
   def index
   	# render layout: "application", text: ""
   end
+
+  def authenticate
+  	redirect_to login_path unless session[:current_user_id]
+  end
+
 end

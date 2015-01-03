@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
 
-  resources :users, except: [:index]
+  resources :users, except: [:index, :edit]
   resources :exercises
   get '/search/:exercise', to: 'exercises#search'
   resources :workouts
   #root 'workouts#show'
   root 'application#index'
+
+  get 'sessions/new' => 'sessions#new', as: 'login'
+  post 'sessions' => 'sessions#create'
+  delete 'sessions' => 'sessions#destroy'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
