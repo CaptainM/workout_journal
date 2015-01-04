@@ -48,7 +48,13 @@ function workoutCompleted() {
 
 
 function getVideos() {
-	$('#close').click(function(){$(this).parent().hide()});
+	$('#close').click(function(){
+		//var span = ($(this)[0]).find('iframe');
+		//$('iframe').empty();
+		//$(this).empty();
+		$(this).parent().empty().hide();
+
+	});
 
 	$.get("/search/" + $(this).data("id"))
 	 .done(function(data) {
