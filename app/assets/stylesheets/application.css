@@ -13,23 +13,44 @@
  *= require_tree .
  *= require_self
  */
+@import url(http://fonts.googleapis.com/css?family=Calligraffitti);
 
-@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400);
 body {
-  background: #B3FFEB;
-  font-family: Josefin Sans;
+  background-image: url('mxxgpne.jpg');
+  font-family: 'Calligraffitti', cursive;
   text-align: center;
+  background-repeat: no-repeat;
+  background-size: 100% 1500px;
+  font-weight: bold;
+}
+
+h1 {
+  padding: 0;
+  margin: 0;
+}
+
+h3 {
+  margin: 0;
+}
+
+#login {
+  float: left;
+  padding-left: 120px;
+  
+}
+
+#header {
+ 
 }
 
 .greybox
 {
     margin-top: 20px;
     margin-left: 130px;
-    background-color: #f7f7f7;
-    border: 1px solid #cccccc;
+    background-color: rgba(255,255,255, 0);
     color: #333333;
-    padding: 20px;
-    font-size: 13px;
+    padding: 0px;
+    font-size: 19px;
     font-weight: bold;
     width: 70%;
     text-align: center;
@@ -49,5 +70,19 @@ span#close {
   float: right;
   color: white;
   font-size: 30px;
+}
+
+a {
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: black;
 }
 
