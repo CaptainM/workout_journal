@@ -24057,3 +24057,17 @@ Processing by ExercisesController#show as JSON
   Parameters: {"id"=>"1"}
   [1m[36mExercise Load (0.3ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1[0m  [["id", 1]]
 Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/exercises/1.json" for 127.0.0.1 at 2015-01-05 18:40:32 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mExercise Load (0.2ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exercises/2.json" for 127.0.0.1 at 2015-01-05 18:40:32 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mExercise Load (0.2ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
