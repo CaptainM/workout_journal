@@ -18,9 +18,10 @@ class ExercisesController < ApplicationController
 	end
 
 	def user_completed_workout
-		user = User.find(params[:current_user_id])
+		user = User.find(session[:current_user_id])
 		workout = Workout.find(params[:workout_id])
 		user.workouts << workout
+		render nothing: true
 	end
 
 

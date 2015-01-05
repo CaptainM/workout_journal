@@ -19,13 +19,13 @@ function thisIsATest() {
 	return("hello world");
 };
 
-function init() {
+var init = function() {
 	if ($('#exercises').length) {
 		fetchAndRenderExercises();
 	}
-};
+}
 
-$(init);
+$(document).ready(init);
 $(document).on("page:load", init);
 
 $(function() {
@@ -33,6 +33,10 @@ $(function() {
 	$("#exercises").on("mouseleave", ".exercise-name", hideDetails);
 	$("#exercises").on("click",'button#button', getVideos);
 	$("#exercises").on("click", 'button#secondButton', workoutCompleted);
+	$("#close").click(function() {
+		$(this).siblings().remove();
+		$(this).parent().hide();
+	});
 });
 
 function workoutCompleted() {
@@ -41,27 +45,20 @@ function workoutCompleted() {
 		url: '/user_completed_workout/' + $(this).data("id"),
 		type: 'put'
 	})
-		.done();//do I need anything here? What I want it to do is in the controller);
+		.done(function() {
+
+			var congrats = $("<p>").text("Congratulations, you completed your workout of the day!");
+			$('#modal').append(congrats).show(200);
+		});//do I need anything here? What I want it to do is in the controller);
 };
 
-
-
-
 function getVideos() {
-	$('#close').click(function(){
-		//var span = ($(this)[0]).find('iframe');
-		//$('iframe').empty();
-		//$(this).empty();
-		$(this).parent().empty().hide();
-
-	});
-
 	$.get("/search/" + $(this).data("id"))
 	 .done(function(data) {
 		$("iframe").remove();
 		var iFrame = $("<iframe>").width("420").height("315").attr('src', data.video_url);
 		
-		$("#modal").append(iFrame).show(500);
+		$("#modal").append(iFrame).show(200);
 	});
 };
 
@@ -69,6 +66,9 @@ function getVideos() {
 function fetchAndRenderExercises() {
 	$.get("/exercises").done(function(data) {
 		data.forEach(renderExercise);
+		var workoutID = data[0].workout_id;
+		var completed = $("<button>").text("Workout " + workoutID + " Completed").data("id", workoutID).attr("id", "secondButton");
+		$('#exercises').append(completed);
 	});
 }
 
@@ -80,10 +80,8 @@ function renderExercise(exerciseObject) {
 	var exerciseDiv = $("<div>").addClass("exercise exercise-id").attr("id", exerciseID);
 	var exerciseDisplay = $("<p>").text(exerciseName).addClass("exercise exercise-name");
 	var video = $("<button>").text("Watch Video on " + exerciseName).data("id", exerciseName).attr("id", "button");
-	var completed = $("<button>").text("Workout " + workoutID + " Completed").data("id", workoutID).attr("id", "secondButton");
 	exerciseDiv.append(exerciseDisplay).append(video);
 	$('#exercises').prepend(exerciseDiv);
-	$('#exercises').append(completed);
 
 }
 
