@@ -21,7 +21,6 @@ class ExercisesController < ApplicationController
 		user = User.find(params[:current_user_id])
 		workout = Workout.find(params[:workout_id])
 		user.workouts << workout
-
 	end
 
 
