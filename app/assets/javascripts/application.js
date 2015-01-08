@@ -23,12 +23,6 @@ var init = function() {
 	if ($('#exercises').length) {
 		fetchAndRenderExercises();
 	}
-}
-
-$(document).ready(init);
-$(document).on("page:load", init);
-
-$(function() {
 	$("#exercises").on("mouseenter", ".exercise-name", showDetails);
 	$("#exercises").on("mouseleave", ".exercise-name", hideDetails);
 	$("#exercises").on("click",'button#button', getVideos);
@@ -37,12 +31,18 @@ $(function() {
 		$(this).siblings().remove();
 		$(this).parent().hide();
 	});
-});
+}
+
+$(document).ready(init);
+$(document).on("page:load", init);
+
+// $(function() {
+// });
 
 function workoutCompleted() {
 	console.log($(this).data("id"));
 	$.ajax({
-		url: '/user_completed_workout/' + $(this).data("id"),
+		url: 'workouts/' + $(this).data("id") + "/complete",
 		type: 'put'
 	})
 		.done(function() {

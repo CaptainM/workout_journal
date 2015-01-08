@@ -24160,3 +24160,1020 @@ Processing by ExercisesController#show as JSON
   Parameters: {"id"=>"4"}
   [1m[35mExercise Load (0.3ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1  [["id", 4]]
 Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-08 18:23:18 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+Completed 200 OK in 101ms (Views: 98.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-08 18:23:18 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-08 18:23:18 -0500
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2015-01-08 18:23:18 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-08 18:23:18 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-08 18:23:18 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-08 18:23:18 -0500
+
+
+Started GET "/assets/mxxgpne.jpg" for 127.0.0.1 at 2015-01-08 18:23:18 -0500
+
+
+Started GET "/exercises" for 127.0.0.1 at 2015-01-08 18:23:18 -0500
+Processing by ExercisesController#index as */*
+  [1m[35mWorkout Load (0.4ms)[0m  SELECT "workouts".* FROM "workouts"
+  [1m[36mExercise Load (0.3ms)[0m  [1mSELECT "exercises".* FROM "exercises"  WHERE "exercises"."workout_id" = $1[0m  [["workout_id", 2]]
+Completed 200 OK in 37ms (Views: 11.7ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/exercises/3.json" for 127.0.0.1 at 2015-01-08 18:23:18 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[35mExercise Load (0.2ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exercises/3.json" for 127.0.0.1 at 2015-01-08 18:23:19 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mExercise Load (0.3ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/workouts/2/complete" for 127.0.0.1 at 2015-01-08 18:23:22 -0500
+Processing by WorkoutsController#complete as */*
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mWorkout Load (0.2ms)[0m  [1mSELECT  "workouts".* FROM "workouts"  WHERE "workouts"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users_workouts" ("user_id", "workout_id") VALUES ($1, $2)[0m  [["user_id", 4], ["workout_id", 2]]
+  [1m[35m (387.7ms)[0m  COMMIT
+  Rendered text template (0.0ms)
+Completed 200 OK in 403ms (Views: 0.7ms | ActiveRecord: 390.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-08 18:30:49 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+Completed 200 OK in 52ms (Views: 48.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-08 18:30:49 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-08 18:30:49 -0500
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2015-01-08 18:30:49 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-08 18:30:49 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-08 18:30:49 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-08 18:30:49 -0500
+
+
+Started GET "/assets/mxxgpne.jpg" for 127.0.0.1 at 2015-01-08 18:30:49 -0500
+
+
+Started GET "/exercises" for 127.0.0.1 at 2015-01-08 18:30:49 -0500
+Processing by ExercisesController#index as */*
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mWorkout Load (0.5ms)[0m  [1mSELECT "workouts".* FROM "workouts"[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1 AND "users"."id" = 4 LIMIT 1  [["workout_id", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1 AND "users"."id" = 4 LIMIT 1[0m  [["workout_id", 2]]
+Completed 500 Internal Server Error in 75741ms
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/models/workout.rb:12:in `unfinished_workouts'
+  app/controllers/exercises_controller.rb:6:in `index'
+
+
+  Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.9ms)
+  Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.2ms)
+  Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (51.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-08 18:32:05 -0500
+
+
+Started DELETE "/sessions" for 127.0.0.1 at 2015-01-08 18:33:51 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vI58GfPqsxEnqmLUx+96WrYlyZhR5poVs6oneqxjgeo="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-08 18:33:51 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 45ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-08 18:33:52 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-08 18:33:52 -0500
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2015-01-08 18:33:52 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-08 18:33:52 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-08 18:33:52 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-08 18:33:52 -0500
+
+
+Started GET "/assets/mxxgpne.jpg" for 127.0.0.1 at 2015-01-08 18:33:52 -0500
+
+
+Started GET "/exercises" for 127.0.0.1 at 2015-01-08 18:33:52 -0500
+Processing by ExercisesController#index as */*
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2015-01-08 18:33:52 -0500
+Processing by SessionsController#new as */*
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 40ms (Views: 39.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-08 18:33:55 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 45ms (Views: 44.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-08 18:33:55 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-08 18:33:55 -0500
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2015-01-08 18:33:55 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-08 18:33:55 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-08 18:33:55 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-08 18:33:55 -0500
+
+
+Started GET "/assets/mxxgpne.jpg" for 127.0.0.1 at 2015-01-08 18:33:55 -0500
+
+
+Started GET "/exercises" for 127.0.0.1 at 2015-01-08 18:33:55 -0500
+Processing by ExercisesController#index as */*
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2015-01-08 18:33:55 -0500
+Processing by SessionsController#new as */*
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 51ms (Views: 50.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-01-08 18:33:58 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (100.0ms)
+Completed 200 OK in 138ms (Views: 130.8ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-01-08 18:34:16 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vI58GfPqsxEnqmLUx+96WrYlyZhR5poVs6oneqxjgeo=", "user"=>{"name"=>"hari", "username"=>"hari", "age"=>"45", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" = 'hari' LIMIT 1[0m
+  [1m[35mSQL (44.9ms)[0m  INSERT INTO "users" ("age", "created_at", "name", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["age", 45], ["created_at", "2015-01-08 23:34:16.139457"], ["name", "hari"], ["password_digest", "$2a$10$xxnqApWjf7xhVg6S6yM/AOFrBeYABKQcurS/SQML1h.yk/5.LugC2"], ["updated_at", "2015-01-08 23:34:16.139457"], ["username", "hari"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/5
+Completed 302 Found in 137ms (ActiveRecord: 46.1ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2015-01-08 18:34:16 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2015-01-08 18:34:16 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 31ms (Views: 30.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-08 18:34:16 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-08 18:34:16 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-08 18:34:16 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-08 18:34:16 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-08 18:34:16 -0500
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2015-01-08 18:34:16 -0500
+
+
+Started GET "/assets/mxxgpne.jpg" for 127.0.0.1 at 2015-01-08 18:34:16 -0500
+
+
+Started POST "/sessions" for 127.0.0.1 at 2015-01-08 18:34:26 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vI58GfPqsxEnqmLUx+96WrYlyZhR5poVs6oneqxjgeo=", "username"=>"hari", "password"=>"[FILTERED]", "commit"=>"Log In!"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."username" = 'hari' LIMIT 1
+Redirected to http://localhost:3000/users/5
+Completed 302 Found in 125ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2015-01-08 18:34:26 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+Completed 200 OK in 47ms (Views: 45.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-08 18:34:26 -0500
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2015-01-08 18:34:26 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-08 18:34:26 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-08 18:34:26 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-08 18:34:26 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-08 18:34:26 -0500
+
+
+Started GET "/assets/mxxgpne.jpg" for 127.0.0.1 at 2015-01-08 18:34:26 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-08 18:34:33 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 31ms (Views: 30.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exercises" for 127.0.0.1 at 2015-01-08 18:34:33 -0500
+Processing by ExercisesController#index as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mWorkout Load (0.3ms)[0m  [1mSELECT "workouts".* FROM "workouts"[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1 AND "users"."id" = 5 LIMIT 1  [["workout_id", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1 AND "users"."id" = 5 LIMIT 1[0m  [["workout_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "workouts".* FROM "workouts"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1 AND "users"."id" = 5 LIMIT 1  [["workout_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1 AND "users"."id" = 5 LIMIT 1[0m  [["workout_id", 2]]
+  [1m[35mExercise Load (0.2ms)[0m  SELECT "exercises".* FROM "exercises"  WHERE "exercises"."workout_id" = $1  [["workout_id", 1]]
+Completed 200 OK in 42056ms (Views: 9.2ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-08 18:35:15 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 41ms (Views: 39.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-08 18:35:15 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-08 18:35:15 -0500
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2015-01-08 18:35:15 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-08 18:35:15 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-08 18:35:15 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-08 18:35:15 -0500
+
+
+Started GET "/assets/mxxgpne.jpg" for 127.0.0.1 at 2015-01-08 18:35:15 -0500
+
+
+Started GET "/exercises" for 127.0.0.1 at 2015-01-08 18:35:15 -0500
+Processing by ExercisesController#index as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mWorkout Load (0.2ms)[0m  [1mSELECT "workouts".* FROM "workouts"[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1 AND "users"."id" = 5 LIMIT 1  [["workout_id", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1 AND "users"."id" = 5 LIMIT 1[0m  [["workout_id", 2]]
+  [1m[35mExercise Load (0.2ms)[0m  SELECT "exercises".* FROM "exercises"  WHERE "exercises"."workout_id" = $1  [["workout_id", 2]]
+Completed 200 OK in 3409ms (Views: 1.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/exercises/4.json" for 127.0.0.1 at 2015-01-08 18:35:20 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mExercise Load (0.2ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1[0m  [["id", 4]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exercises/3.json" for 127.0.0.1 at 2015-01-08 18:35:22 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[35mExercise Load (0.2ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/workouts/2/complete" for 127.0.0.1 at 2015-01-08 18:35:28 -0500
+Processing by WorkoutsController#complete as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mWorkout Load (0.2ms)[0m  SELECT  "workouts".* FROM "workouts"  WHERE "workouts"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users_workouts" ("user_id", "workout_id") VALUES ($1, $2)  [["user_id", 5], ["workout_id", 2]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 13ms (Views: 0.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/exercises/3.json" for 127.0.0.1 at 2015-01-08 18:35:29 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[35mExercise Load (0.2ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exercises/3.json" for 127.0.0.1 at 2015-01-08 18:35:32 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mExercise Load (0.3ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-08 18:35:35 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+Completed 200 OK in 58ms (Views: 52.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/exercises" for 127.0.0.1 at 2015-01-08 18:35:36 -0500
+Processing by ExercisesController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mWorkout Load (0.5ms)[0m  SELECT "workouts".* FROM "workouts"
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1 AND "users"."id" = 5 LIMIT 1[0m  [["workout_id", 1]]
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1 AND "users"."id" = 5 LIMIT 1  [["workout_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "workouts".* FROM "workouts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1 AND "users"."id" = 5 LIMIT 1[0m  [["workout_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1 AND "users"."id" = 5 LIMIT 1  [["workout_id", 2]]
+  [1m[36mExercise Load (0.3ms)[0m  [1mSELECT "exercises".* FROM "exercises"  WHERE "exercises"."workout_id" = $1[0m  [["workout_id", 1]]
+Completed 200 OK in 39944ms (Views: 1.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-08 18:36:21 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+Completed 200 OK in 38ms (Views: 36.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-08 18:36:21 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-08 18:36:21 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-08 18:36:21 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-08 18:36:21 -0500
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2015-01-08 18:36:21 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-08 18:36:21 -0500
+
+
+Started GET "/assets/mxxgpne.jpg" for 127.0.0.1 at 2015-01-08 18:36:21 -0500
+
+
+Started GET "/exercises" for 127.0.0.1 at 2015-01-08 18:36:21 -0500
+Processing by ExercisesController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mWorkout Load (0.2ms)[0m  SELECT "workouts".* FROM "workouts"
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1 AND "users"."id" = 5 LIMIT 1[0m  [["workout_id", 1]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1 AND "users"."id" = 5 LIMIT 1  [["workout_id", 2]]
+  [1m[36mExercise Load (0.2ms)[0m  [1mSELECT "exercises".* FROM "exercises"  WHERE "exercises"."workout_id" = $1[0m  [["workout_id", 1]]
+Completed 200 OK in 8763ms (Views: 1.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-08 18:36:33 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+Completed 200 OK in 44ms (Views: 41.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-08 18:36:33 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-08 18:36:33 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-08 18:36:33 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-08 18:36:33 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-08 18:36:33 -0500
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2015-01-08 18:36:33 -0500
+
+
+Started GET "/assets/mxxgpne.jpg" for 127.0.0.1 at 2015-01-08 18:36:33 -0500
+
+
+Started GET "/exercises" for 127.0.0.1 at 2015-01-08 18:36:33 -0500
+Processing by ExercisesController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mWorkout Load (0.3ms)[0m  SELECT "workouts".* FROM "workouts"
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1 AND "users"."id" = 5 LIMIT 1[0m  [["workout_id", 1]]
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1 AND "users"."id" = 5 LIMIT 1  [["workout_id", 2]]
+  [1m[36mExercise Load (0.9ms)[0m  [1mSELECT "exercises".* FROM "exercises"  WHERE "exercises"."workout_id" = $1[0m  [["workout_id", 1]]
+Completed 200 OK in 49ms (Views: 9.4ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-08 18:37:03 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/exercises" for 127.0.0.1 at 2015-01-08 18:37:03 -0500
+Processing by ExercisesController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mWorkout Load (0.2ms)[0m  SELECT "workouts".* FROM "workouts"
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1 AND "users"."id" = 5 LIMIT 1[0m  [["workout_id", 1]]
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1 AND "users"."id" = 5 LIMIT 1  [["workout_id", 2]]
+  [1m[36mExercise Load (0.2ms)[0m  [1mSELECT "exercises".* FROM "exercises"  WHERE "exercises"."workout_id" = $1[0m  [["workout_id", 1]]
+Completed 200 OK in 8ms (Views: 1.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2015-01-08 18:37:20 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=3):
+  app/controllers/users_controller.rb:7:in `show'
+
+
+  Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.9ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2015-01-08 18:37:32 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=2):
+  app/controllers/users_controller.rb:7:in `show'
+
+
+  Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.6ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2015-01-08 18:37:45 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 33ms (Views: 30.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-08 18:37:45 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-08 18:37:45 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-08 18:37:45 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-08 18:37:45 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-08 18:37:45 -0500
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2015-01-08 18:37:45 -0500
+
+
+Started GET "/assets/mxxgpne.jpg" for 127.0.0.1 at 2015-01-08 18:37:45 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-08 18:37:50 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+Completed 200 OK in 43ms (Views: 42.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exercises" for 127.0.0.1 at 2015-01-08 18:37:50 -0500
+Processing by ExercisesController#index as */*
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mWorkout Load (0.3ms)[0m  SELECT "workouts".* FROM "workouts"
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1 AND "users"."id" = 5 LIMIT 1[0m  [["workout_id", 1]]
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1 AND "users"."id" = 5 LIMIT 1  [["workout_id", 2]]
+  [1m[36mExercise Load (0.2ms)[0m  [1mSELECT "exercises".* FROM "exercises"  WHERE "exercises"."workout_id" = $1[0m  [["workout_id", 1]]
+Completed 200 OK in 13ms (Views: 1.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-08 18:37:58 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-08 18:38:08 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+Completed 200 OK in 35ms (Views: 34.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-08 18:38:08 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-08 18:38:08 -0500
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2015-01-08 18:38:08 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-08 18:38:08 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-08 18:38:08 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-08 18:38:08 -0500
+
+
+Started GET "/assets/mxxgpne.jpg" for 127.0.0.1 at 2015-01-08 18:38:08 -0500
+
+
+Started GET "/exercises" for 127.0.0.1 at 2015-01-08 18:38:08 -0500
+Processing by ExercisesController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mWorkout Load (0.3ms)[0m  SELECT "workouts".* FROM "workouts"
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1 AND "users"."id" = 5 LIMIT 1[0m  [["workout_id", 1]]
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1 AND "users"."id" = 5 LIMIT 1  [["workout_id", 2]]
+  [1m[36mExercise Load (0.2ms)[0m  [1mSELECT "exercises".* FROM "exercises"  WHERE "exercises"."workout_id" = $1[0m  [["workout_id", 1]]
+Completed 200 OK in 9ms (Views: 1.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/exercises/2.json" for 127.0.0.1 at 2015-01-08 18:38:10 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mExercise Load (0.2ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exercises/1.json" for 127.0.0.1 at 2015-01-08 18:40:03 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mExercise Load (0.2ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exercises/2.json" for 127.0.0.1 at 2015-01-08 18:40:03 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mExercise Load (0.3ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/exercises/2.json" for 127.0.0.1 at 2015-01-08 18:40:03 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mExercise Load (0.2ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2015-01-08 18:40:04 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 53ms (Views: 51.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-08 18:40:06 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exercises" for 127.0.0.1 at 2015-01-08 18:40:06 -0500
+Processing by ExercisesController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mWorkout Load (0.5ms)[0m  SELECT "workouts".* FROM "workouts"
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1 AND "users"."id" = 5 LIMIT 1[0m  [["workout_id", 1]]
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1 AND "users"."id" = 5 LIMIT 1  [["workout_id", 2]]
+  [1m[36mExercise Load (0.3ms)[0m  [1mSELECT "exercises".* FROM "exercises"  WHERE "exercises"."workout_id" = $1[0m  [["workout_id", 1]]
+Completed 200 OK in 14ms (Views: 2.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-08 18:40:39 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-08 18:40:39 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:39 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:39 -0500
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:39 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:39 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:39 -0500
+
+
+Started GET "/assets/mxxgpne.jpg" for 127.0.0.1 at 2015-01-08 18:40:39 -0500
+
+
+Started GET "/exercises" for 127.0.0.1 at 2015-01-08 18:40:39 -0500
+Processing by ExercisesController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mWorkout Load (0.3ms)[0m  SELECT "workouts".* FROM "workouts"
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1 AND "users"."id" = 5 LIMIT 1[0m  [["workout_id", 1]]
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1 AND "users"."id" = 5 LIMIT 1  [["workout_id", 2]]
+  [1m[36mExercise Load (0.2ms)[0m  [1mSELECT "exercises".* FROM "exercises"  WHERE "exercises"."workout_id" = $1[0m  [["workout_id", 1]]
+Completed 200 OK in 10ms (Views: 2.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-08 18:40:39 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+Completed 200 OK in 45ms (Views: 43.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:39 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-08 18:40:39 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:39 -0500
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:39 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:39 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:39 -0500
+
+
+Started GET "/assets/mxxgpne.jpg" for 127.0.0.1 at 2015-01-08 18:40:39 -0500
+
+
+Started GET "/exercises" for 127.0.0.1 at 2015-01-08 18:40:39 -0500
+Processing by ExercisesController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mWorkout Load (0.3ms)[0m  SELECT "workouts".* FROM "workouts"
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1 AND "users"."id" = 5 LIMIT 1[0m  [["workout_id", 1]]
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1 AND "users"."id" = 5 LIMIT 1  [["workout_id", 2]]
+  [1m[36mExercise Load (0.3ms)[0m  [1mSELECT "exercises".* FROM "exercises"  WHERE "exercises"."workout_id" = $1[0m  [["workout_id", 1]]
+Completed 200 OK in 10ms (Views: 2.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-08 18:40:39 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+Completed 200 OK in 48ms (Views: 47.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-08 18:40:39 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:39 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:39 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:39 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:39 -0500
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:39 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-08 18:40:39 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 61ms (Views: 59.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/exercises" for 127.0.0.1 at 2015-01-08 18:40:39 -0500
+Processing by ExercisesController#index as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mWorkout Load (0.3ms)[0m  [1mSELECT "workouts".* FROM "workouts"[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1 AND "users"."id" = 5 LIMIT 1  [["workout_id", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1 AND "users"."id" = 5 LIMIT 1[0m  [["workout_id", 2]]
+  [1m[35mExercise Load (0.2ms)[0m  SELECT "exercises".* FROM "exercises"  WHERE "exercises"."workout_id" = $1  [["workout_id", 1]]
+Completed 200 OK in 8ms (Views: 1.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/mxxgpne.jpg" for 127.0.0.1 at 2015-01-08 18:40:39 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-08 18:40:39 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:39 -0500
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:39 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:39 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:39 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:39 -0500
+
+
+Started GET "/assets/mxxgpne.jpg" for 127.0.0.1 at 2015-01-08 18:40:39 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-08 18:40:39 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 56ms (Views: 54.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exercises" for 127.0.0.1 at 2015-01-08 18:40:39 -0500
+Processing by ExercisesController#index as */*
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mWorkout Load (0.4ms)[0m  [1mSELECT "workouts".* FROM "workouts"[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1 AND "users"."id" = 5 LIMIT 1  [["workout_id", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1 AND "users"."id" = 5 LIMIT 1[0m  [["workout_id", 2]]
+  [1m[35mExercise Load (0.4ms)[0m  SELECT "exercises".* FROM "exercises"  WHERE "exercises"."workout_id" = $1  [["workout_id", 1]]
+Completed 200 OK in 10ms (Views: 2.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-08 18:40:39 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 52ms (Views: 51.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:39 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-08 18:40:39 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:39 -0500
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:39 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:39 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:39 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:40 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:40 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:40 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:40 -0500
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:40 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-08 18:40:40 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-08 18:40:40 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+Completed 200 OK in 36ms (Views: 34.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/mxxgpne.jpg" for 127.0.0.1 at 2015-01-08 18:40:40 -0500
+
+
+Started GET "/exercises" for 127.0.0.1 at 2015-01-08 18:40:40 -0500
+Processing by ExercisesController#index as */*
+  [1m[36mUser Load (4.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mWorkout Load (0.3ms)[0m  SELECT "workouts".* FROM "workouts"
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1 AND "users"."id" = 5 LIMIT 1[0m  [["workout_id", 1]]
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1 AND "users"."id" = 5 LIMIT 1  [["workout_id", 2]]
+  [1m[36mExercise Load (0.3ms)[0m  [1mSELECT "exercises".* FROM "exercises"  WHERE "exercises"."workout_id" = $1[0m  [["workout_id", 1]]
+Completed 200 OK in 13ms (Views: 1.7ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-08 18:40:40 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:40 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:40 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:40 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:40 -0500
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:40 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-08 18:40:40 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+Completed 200 OK in 35ms (Views: 34.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/mxxgpne.jpg" for 127.0.0.1 at 2015-01-08 18:40:40 -0500
+
+
+Started GET "/exercises" for 127.0.0.1 at 2015-01-08 18:40:40 -0500
+Processing by ExercisesController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mWorkout Load (0.2ms)[0m  SELECT "workouts".* FROM "workouts"
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1 AND "users"."id" = 5 LIMIT 1[0m  [["workout_id", 1]]
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1 AND "users"."id" = 5 LIMIT 1  [["workout_id", 2]]
+  [1m[36mExercise Load (0.1ms)[0m  [1mSELECT "exercises".* FROM "exercises"  WHERE "exercises"."workout_id" = $1[0m  [["workout_id", 1]]
+Completed 200 OK in 6ms (Views: 1.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:40 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:40 -0500
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:40 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-08 18:40:40 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:40 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:40 -0500
+
+
+Started GET "/assets/mxxgpne.jpg" for 127.0.0.1 at 2015-01-08 18:40:40 -0500
+
+
+Started GET "/exercises" for 127.0.0.1 at 2015-01-08 18:40:40 -0500
+Processing by ExercisesController#index as */*
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mWorkout Load (0.7ms)[0m  [1mSELECT "workouts".* FROM "workouts"[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1 AND "users"."id" = 5 LIMIT 1  [["workout_id", 1]]
+  [1m[36mUser Exists (0.9ms)[0m  [1mSELECT  1 AS one FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1 AND "users"."id" = 5 LIMIT 1[0m  [["workout_id", 2]]
+  [1m[35mExercise Load (0.3ms)[0m  SELECT "exercises".* FROM "exercises"  WHERE "exercises"."workout_id" = $1  [["workout_id", 1]]
+Completed 200 OK in 15ms (Views: 2.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2015-01-08 18:40:43 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+Completed 200 OK in 35ms (Views: 32.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:43 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-08 18:40:43 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:43 -0500
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:43 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:43 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-08 18:40:43 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-08 18:40:45 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/exercises" for 127.0.0.1 at 2015-01-08 18:40:45 -0500
+Processing by ExercisesController#index as */*
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mWorkout Load (0.9ms)[0m  [1mSELECT "workouts".* FROM "workouts"[0m
+  [1m[35mUser Exists (0.7ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1 AND "users"."id" = 5 LIMIT 1  [["workout_id", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1 AND "users"."id" = 5 LIMIT 1[0m  [["workout_id", 2]]
+  [1m[35mExercise Load (0.3ms)[0m  SELECT "exercises".* FROM "exercises"  WHERE "exercises"."workout_id" = $1  [["workout_id", 1]]
+Completed 200 OK in 12ms (Views: 1.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/exercises/2.json" for 127.0.0.1 at 2015-01-08 18:40:45 -0500
+Processing by ExercisesController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mExercise Load (0.2ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
