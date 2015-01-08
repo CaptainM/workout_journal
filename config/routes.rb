@@ -4,7 +4,12 @@ Rails.application.routes.draw do
   resources :exercises
   get '/search/:exercise', to: 'exercises#search'
   put '/user_completed_workout/:workout_id', to: 'exercises#user_completed_workout'
-  resources :workouts
+  resources :workouts do
+    member do
+      put 'complete' => 'workouts#complete'
+    end
+  end
+
   #root 'workouts#show'
   root 'application#index'
 

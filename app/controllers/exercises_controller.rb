@@ -2,7 +2,7 @@ class ExercisesController < ApplicationController
 	before_action :authenticate, except: [:show, :search]
 
 	def index
-		@workout = Workout.all.sample()
+		@workout = Workout.unfinished_workouts(User.find(session[:current_user_id])).sample
 		@exercises = @workout.exercises
 		render json: @exercises
 	end
@@ -17,12 +17,7 @@ class ExercisesController < ApplicationController
 		render json: {video_url: @parameter}
 	end
 
-	def user_completed_workout
-		user = User.find(session[:current_user_id])
-		workout = Workout.find(params[:workout_id])
-		user.workouts << workout
-		render nothing: true
-	end
+
 
 
 end
