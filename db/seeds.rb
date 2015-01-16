@@ -8,7 +8,7 @@
 Workout.destroy_all
 Exercise.destroy_all
 
-f = File.open(ENV["PWD"]+"/db/workout.json")
+f = File.open("#{Rails.root}/db/workout.json")
 myjson = JSON.parse(f.read)
 
 myjson.values[0].each do |workout|
