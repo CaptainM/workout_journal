@@ -25217,3 +25217,43 @@ SyntaxError (/Users/Caroline/Repos/workout_journal/app/assets/stylesheets/applic
   Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
   Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
   Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:40:37 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 325ms (Views: 324.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:40:37 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:40:37 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:40:37 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:40:37 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:40:37 -0500
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2015-01-16 15:40:38 -0500
+
+
+Started GET "/assets/mxxgpne.jpg" for 127.0.0.1 at 2015-01-16 15:40:38 -0500
+
+
+Started GET "/exercises" for 127.0.0.1 at 2015-01-16 15:40:38 -0500
+Processing by ExercisesController#index as */*
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2015-01-16 15:40:39 -0500
+Processing by SessionsController#new as */*
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 63ms (Views: 62.2ms | ActiveRecord: 0.0ms)
