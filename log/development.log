@@ -25177,3 +25177,23 @@ Processing by ExercisesController#show as JSON
   Parameters: {"id"=>"2"}
   [1m[36mExercise Load (0.2ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."id" = $1 LIMIT 1[0m  [["id", 2]]
 Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:35:42 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (56.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 111ms
+
+SyntaxError (/Users/Caroline/Repos/workout_journal/app/assets/stylesheets/application.css.erb:20: syntax error, unexpected ')', expecting :: or '[' or '.'
+...cat((image_path, 'mxxgpne.jpg').to_s); _erbout.concat ";\n"
+...                               ^
+  (in /Users/Caroline/Repos/workout_journal/app/assets/stylesheets/application.css.erb)):
+  app/assets/stylesheets/application.css.erb:20: syntax error, unexpected ')', expecting :: or '[' or '.'
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___2069798457268677740_70174093158500'
+
+
+  Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (52.1ms)
