@@ -25257,3 +25257,115 @@ Started GET "/sessions/new" for 127.0.0.1 at 2015-01-16 15:40:39 -0500
 Processing by SessionsController#new as */*
   Rendered sessions/new.html.erb within layouts/application (1.4ms)
 Completed 200 OK in 63ms (Views: 62.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:46:30 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 178ms (Views: 177.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:46:30 -0500
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2015-01-16 15:46:30 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:46:30 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:46:30 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:46:30 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:46:30 -0500
+
+
+Started GET "/exercises" for 127.0.0.1 at 2015-01-16 15:46:30 -0500
+Processing by ExercisesController#index as */*
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/images/mxxgpne.jpg" for 127.0.0.1 at 2015-01-16 15:46:30 -0500
+
+ActionController::RoutingError (No route matches [GET] "/images/mxxgpne.jpg"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.7ms)
+  Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (54.0ms)
+  Rendered /Users/Caroline/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (139.7ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2015-01-16 15:46:30 -0500
+Processing by SessionsController#new as */*
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 75ms (Views: 74.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 16:02:06 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 424ms (Views: 392.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 16:02:07 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 16:02:07 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 16:02:07 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 16:02:07 -0500
+
+
+Started GET "/assets/youtube.js?body=1" for 127.0.0.1 at 2015-01-16 16:02:07 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 16:02:07 -0500
+
+
+Started GET "/assets/mxxgpne.jpg" for 127.0.0.1 at 2015-01-16 16:02:08 -0500
+
+
+Started GET "/exercises" for 127.0.0.1 at 2015-01-16 16:02:08 -0500
+Processing by ExercisesController#index as */*
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2015-01-16 16:02:08 -0500
+Processing by SessionsController#new as */*
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 76ms (Views: 75.1ms | ActiveRecord: 0.0ms)
